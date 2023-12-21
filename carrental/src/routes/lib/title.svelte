@@ -20,11 +20,5 @@
         padding: 0;
     }
 
-    .title h1 {
-        margin-left: 0;
-        padding: 0;
-        font-family: 'Montserrat', sans-serif;
-        color: white;
-        font-size: 24px;
-    }
+
 </style>
