@@ -8,8 +8,29 @@
 
 
   <header>
-    <Title title="Brno Car Rental"/>
+
+    <nav>
+      <div class="pageTitle">
+        <Title title="Brno Car Rental"/>
+      </div>
+
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/carList">Car List</a>
+        <a href="/prices">Prices</a>
+        <a href="/contact">Contact</a>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.instagram.com/"><img src="/instagram.svg" alt="instagram"/></a>
+        <a href="https://www.linkedin.com/"><img src="/linkedin.svg" alt="twitter"/></a>
+        <a href="https://www.facebook.com/"><img src="/facebook.svg" alt="facebook"/></a>
+      </div>
+    </nav>
+
   </header>
+
   <main>
     <slot/>
   </main>
@@ -39,8 +60,7 @@
 
     header {
       padding: 20px;
-      display: flex;
-      justify-content: center;
+      text-align: center;
     }
 
     main {
@@ -51,5 +71,39 @@
     footer {
       padding: 20px;
       text-align: center;
+    }
+
+    .links {
+      margin:  auto;
+      justify-content: space-between;
+
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 18px;
+      margin: 10px;
+    }
+
+    nav {
+      padding: 10px;
+      align-items: center;
+      display: flex;
+      max-width: 1760px;
+      margin: 0 auto;
+    }
+
+    .socials {
+      display: inline;
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .pageTitle {
+      display: inline;
+      width: 100%;
+      max-width: 200px;
     }
   </style>
