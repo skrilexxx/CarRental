@@ -1,3 +1,6 @@
-1. title
-2. navigation
-3. smaller titles
+1. title - done
+2. navigation - done
+3. smaller titles - done (provizorne je to 90%tni)
+4. About text zformatovat
+5. search bar
+6. contact text formatovat

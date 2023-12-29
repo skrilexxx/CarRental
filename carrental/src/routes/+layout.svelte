@@ -73,6 +73,11 @@
       text-align: center;
     }
 
+    footer p {
+      font-size: 16px;
+      color: white;
+    }
+
     .links {
       margin:  auto;
       justify-content: space-between;
@@ -94,6 +99,8 @@
       max-width: 1760px;
       margin: 0 auto;
     }
+
+
 
     .socials {
       display: inline;
