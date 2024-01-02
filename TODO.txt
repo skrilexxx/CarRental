@@ -2,5 +2,7 @@
 2. navigation - done
 3. smaller titles - done (provizorne je to 95%tni)
 4. About text zformatovat - done (na 99% jen ta odrazka tak ono to proste jede pod ni a ne uplne jak jsem chtel)
+4.5 udělat univerzální button co se použije v searchbaru
 5. search bar
-6. contact text formatovat
+6. contact text formatovat - done
+Dodatek - mozna bych zmeni z bold na semibold nebo tak neco trosku, v maym pismu mi bold prijde moc to stejny i na About page

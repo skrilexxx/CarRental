@@ -9,19 +9,19 @@
 </div>
 <div class="content">
     <div class="home">
-        <p>Get in Touch with Brno Car Rentals</p>
+        <p style="font-weight: bold;">Get in Touch with Brno Car Rentals</p>
         <br><br>
-        <p>Have questions, need assistance, or just want to say hello? We're here for you! Contact Brno Rentals through the following channels:</p>
+        <p>Have questions, need assistance, or just want to say hello? We're here for you! Contact us through the following channels:</p>
         <br><br>
-        <p>Customer Service Hotline:</p>
+        <p style="font-weight: bold;">Customer Service Hotline:</p>
         <br>
-        <p> Our dedicated customer support team is available 24/7 to assist you. Whether you need help with your reservation, have inquiries about our vehicles, or require roadside assistance, don't hesitate to give us a call at [Your Hotline Number].</p>
+        <p>Our dedicated customer support team is available 24/7 to assist you. Whether you need help with your reservation, have inquiries about our vehicles, or require roadside assistance, don't hesitate to give us a call at [Your Hotline Number].</p>
         <br><br>
-        <p>Email Support:</p>
+        <p style="font-weight: bold;">Email Support:</p>
         <br>
         <p>For non-urgent matters or detailed inquiries, feel free to drop us an email at [Your Email Address]. Our team will get back to you as soon as possible.</p>
         <br><br>
-        <p>Social Media:</p>
+        <p style="font-weight: bold;">Social Media:</p>
         <br>
         <p>Stay connected with us on social media for the latest updates, promotions, and travel tips. Follow us on [Your Social Media Handles] and join the Brno Car Rentals community.</p>
         <br><br>
