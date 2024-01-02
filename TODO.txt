@@ -1,6 +1,6 @@
 1. title - done
 2. navigation - done
 3. smaller titles - done (provizorne je to 95%tni)
-4. About text zformatovat
+4. About text zformatovat - done (na 99% jen ta odrazka tak ono to proste jede pod ni a ne uplne jak jsem chtel)
 5. search bar
 6. contact text formatovat

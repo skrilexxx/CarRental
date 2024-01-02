@@ -10,15 +10,11 @@
 <div class="content">
     <div class="home">
         <p style="font-weight: bold;">Welcome to Brno Car Rentals</p>
-        <br>
-        <br>
+        <br><br>
         <p>Explore the vibrant city of Brno with the convenience and freedom of our premium car rental services. At Brno Car Rentals, we understand that your journey is unique, and we're here to ensure you travel in comfort and style.</p>
-        <br>
-        <br>
-        <br>
+        <br><br><br>
         <p style="font-weight: bold;">Why Choose Brno Car Rentals?</p>
-        <br>
-        <br>
+        <br><br>
         <ul class="answerList" style="list-style-type:none">
             <li><p>Extensive Fleet: From compact cars to spacious SUVs, we have a diverse fleet to cater to your specific needs. Whether you're here for a business trip or a family vacation, we have the perfect vehicle for you.</p></li>
             <br>
