@@ -41,22 +41,7 @@
 
 
   <style>
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('/fonts/Montserrat-Bold.ttf');
-    }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('/fonts/Montserrat-Regular.ttf');
-    }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('/fonts/Montserrat-SemiBold.ttf');
-    }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('/fonts/Montserrat-Medium.ttf');
-    }
+
 
     header {
       padding: 20px;
