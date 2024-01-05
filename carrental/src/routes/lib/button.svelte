@@ -2,25 +2,34 @@
 
     export let label;
 
+    function search () {
+        window.location.href = "/carList";
+    }
+
 </script>
 
-<button type="button">{label}</button>
+<button type="button" on:click={search}>{label}</button>
+
 
 <style>
 
 button {
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     background-color: #BC6FF1;
     border: none;
     border-radius: 10px;
-    width: 123px;
+    max-width: 200px;
     height: 72px;
+    width: 100%;
     font-weight:  bold;
-    font-size: 1vw;
+    font-size: 20px;
     font-family: "Montserrat", sans-serif;
     transition-duration: 0.4s;
-    
+    cursor: pointer;
+    margin: 3px;
 }
 
 button:hover {
