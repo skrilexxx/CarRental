@@ -1,4 +1,6 @@
 <script>
+	import Button from "./lib/button.svelte";
+
 
 </script>
 
@@ -8,6 +10,7 @@
     </div>
 </div>
 <div class="content">
+    <Button label="Search"></Button>
     <p>searchbar here</p>
     <div class="home">
         <p>Ready to start your Brno journey? Enter your details in the search bar above and let Brno Car Rentals be your trusted companion on the road.</p>
