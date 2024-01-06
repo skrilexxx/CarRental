@@ -14,9 +14,12 @@
 
 <div class="content">
     <Searchbar/>
+    <!-- Checkboxes, mozna v searchbaru idk  -->
+
+    <br><br><br><br><br>
     <div class="home">
         <p>Ready to start your Brno journey? Enter your details in the search bar above and let Brno Car Rentals be your trusted companion on the road.</p>
-    </div>
+        </div>
 </div>
 
 

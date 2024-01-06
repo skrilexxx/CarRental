@@ -9,10 +9,9 @@
     <div class="searchbar">
         <Calendar></Calendar>
         <Calendar></Calendar>
-
         <Button label="Search"></Button>
-
     </div>
+
 </div>
 
 <style>
@@ -26,8 +25,8 @@
 
 .searchbar {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin: 0 auto;
     padding: 0;
     max-width: 1760px;
