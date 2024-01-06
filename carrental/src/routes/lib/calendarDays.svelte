@@ -5,7 +5,7 @@
 </script>
 
 <div class="content">
-    <p>cau</p>
+    <p>calendar days</p>
 </div>
 
 

@@ -138,8 +138,8 @@
 }
 
 .icon img {
-    width:  60%;
-    height: 60%;
+    width:  50%;
+    height: 50%;
 }
 
 .line {
@@ -149,17 +149,22 @@
 }
 
 .lineIn {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .time  {
     margin: 3px;
 }
 
+.calendar .time {
+    margin: 5px;
+
+}
+
 p {
     color: black;
-    font-size: 1.3vw;
+    font-size: 1vw;
     font-weight: 600;
 
 }
@@ -175,6 +180,7 @@ p {
     width: 100%;
     height: 28vh;
     margin-top: 3px;
+    animation: fade-in 0.4s;
 }
 
 .monthTime {
@@ -187,7 +193,7 @@ p {
 }
 
 .monthTime p {
-    font-size: 1.3vw;
+    font-size: 1vw;
     font-weight: 600;
 }
 
@@ -241,5 +247,10 @@ p {
     width: 90%;
     height: 75%;
     background-color: bisque;
+}
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 </style>

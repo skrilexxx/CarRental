@@ -1,12 +1,14 @@
 <script>
 	import Button from "./button.svelte";
 	import Calendar from "./calendar.svelte";
+    import Pickupbar from "./pickupbar.svelte";
 
 
 </script>
 
 <div class="barBg">
     <div class="searchbar">
+        <Pickupbar></Pickupbar>
         <Calendar></Calendar>
         <Calendar></Calendar>
         <Button label="Search"></Button>
