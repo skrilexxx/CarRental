@@ -3,11 +3,12 @@
 3. smaller titles - done (provizorne je to 95%tni)
 4. About text zformatovat - done (na 99% jen ta odrazka tak ono to proste jede pod ni a ne uplne jak jsem chtel)
 4.5 udělat univerzální button co se použije v searchbaru - done
-5. search bar
+5. search bar - 50%
 6. contact text formatovat - done
-Dodatek - mozna bych zmeni z bold na semibold nebo tak neco trosku, v maym pismu mi bold prijde moc to stejny i na About page
-
-
+6.5 fonty fix - done
+7. stahovani kalendare od nekud idk, potrebuju vedet kolik ma mesic dni a jakej den zacina, nacitani current date asi ze serveru
+8. dodělat vybíraní dne kalendáře
+9.
 
 
 Po tom co bude page hotova na 1920*1080 rozliseni cca nebo jakoze n pc, tak to muzu predelat i na phone pomoci tovyho toho ze od nejakych zormeru to bude mit nejaky rozmery atd

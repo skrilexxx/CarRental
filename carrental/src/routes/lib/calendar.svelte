@@ -1,5 +1,8 @@
 <script>
 
+    import CalendarDays from "./calendarDays.svelte";
+
+
     let selectedDay = 11;
     let weekDay = "Mon";
     let selectedMonth = 9;
@@ -25,11 +28,22 @@
 
     function showCalendar() {
         state = !state;
-        console.log("Calendar state: " + state);
     }
 
-    function changeMonth() {
-        return;
+    function changeMonthAdd() {
+        if (selectedMonth == 12) {
+            selectedMonth = 1;
+        } else {
+            selectedMonth++;
+        }
+    }
+
+    function changeMonthRem() {
+        if (selectedMonth == 1) {
+            selectedMonth = 12;
+        } else {
+            selectedMonth--;
+        }
     }
 
     function changeDay() {
@@ -59,9 +73,27 @@
     {#if state}
     <div class="calendar">
         <div class="monthTime">
-            <button on:click={changeMonth}>{"<"}</button>
-            <p>{months[selectedMonth]}</p>
-            <button on:click={changeMonth}>{">"}</button>
+            <div class="arrowleft" on:click={changeMonthRem}>
+                <img src="/arrowLeft.svg" alt="arrowleft"/>
+            </div>
+
+            <div class="month">
+                <p>{months[selectedMonth]}</p>
+            </div>
+
+            <div class="arrowright" on:click={changeMonthAdd}>
+                <img src="/arrowRight.svg" alt="arrowright"/>
+            </div>
+
+            <img  class="lineIn" src="/line.svg" alt="line">
+
+            <div class="time">
+                <p>{time}</p>
+            </div>
+        </div>
+
+        <div class="calendarDays">
+            <CalendarDays></CalendarDays>
         </div>
     </div>
     {/if}
@@ -116,6 +148,11 @@
 
 }
 
+.lineIn {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
 .time  {
     margin: 3px;
 }
@@ -147,5 +184,62 @@ p {
     justify-content: center;
     width: 100%;
     height: 20%;
+}
+
+.monthTime p {
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+
+.month {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 100%;
+}
+
+.arrowleft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+}
+
+.arrowleft:hover {
+    cursor: pointer;
+}
+
+.arrowleft img {
+    width:  40%;
+    height: 40%;
+}
+
+.arrowright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+}
+
+.arrowright img {
+    width:  40%;
+    height: 40%;
+}
+
+.arrowright:hover {
+    cursor: pointer;
+}
+
+
+.calendarDays {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 75%;
+    background-color: bisque;
 }
 </style>
