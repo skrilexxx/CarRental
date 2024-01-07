@@ -10,6 +10,11 @@
     }
 
 
+
+
+
+
+
 </script>
 
 <div class="content">
@@ -22,12 +27,12 @@
     </div>
 
     {#if state}
-        <div class="dropdown">
+        <div class="dropdown" id="dropdown">
             <p>Choose pick-up location</p>
             <Location bind:selecredLocation={location} label="NC Královo Pole" address="OC, Cimburkova 4, 612 00 Brno-Královo Pole"></Location>
             <Location bind:selecredLocation={location} label="Parkoviště Hlavní nádraží" address="Benešova 52, 602 00 Brno-střed"></Location>
             <Location bind:selecredLocation={location} label="Galerie Vaňkovka" address="Ve Vaňkovce 1, 602 00 Brno-střed"></Location>
-            <Location bind:selecredLocation={location} label="Parkoviště Letiště Brno-Tuřany" address="OC, Cimburkova 4, 612 00 Brno-Královo Pole"></Location>
+            <Location bind:selecredLocation={location} label="Parkoviště Letiště Brno-Tuřany" address="Letiště Brno-Tuřany 904/1, 627 00 Brno - Tuřany"></Location>
         </div>
     {/if}
 </div>
@@ -84,8 +89,15 @@
     animation-duration: 0.4s;
 }
 
+
+
 .dropdown::-webkit-scrollbar {
     display: none;
+}
+
+.dropdown{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 p {

@@ -1,14 +1,15 @@
 1. title - done
 2. navigation - done
-3. smaller titles - done (provizorne je to 95%tni)
-4. About text zformatovat - done (na 99% jen ta odrazka tak ono to proste jede pod ni a ne uplne jak jsem chtel)
+3. smaller titles - done
+4. About text zformatovat - done
 4.5 udělat univerzální button co se použije v searchbaru - done
-5. search bar - 50%
+5. search bar - 95%
 6. contact text formatovat - done
 6.5 fonty fix - done
 7. stahovani kalendare od nekud idk, potrebuju vedet kolik ma mesic dni a jakej den zacina, nacitani current date asi ze serveru
 8. dodělat vybíraní dne kalendáře
-9. dropdown na lokace
+9. dropdown na lokace - pridat hide scrollbar na firefox je to jen na chrome done (jen fixnout ty lines)
+10. checkboxy
 
 
 Po tom co bude page hotova na 1920*1080 rozliseni cca nebo jakoze n pc, tak to muzu predelat i na phone pomoci tovyho toho ze od nejakych zormeru to bude mit nejaky rozmery atd
