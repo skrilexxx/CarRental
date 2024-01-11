@@ -10,6 +10,6 @@
 8. dodělat vybíraní dne kalendáře
 9. dropdown na lokace - pridat hide scrollbar na firefox je to jen na chrome done (jen fixnout ty lines)
 10. checkboxy
-
+11. fix calendar scaleble text na non scalable
 
 Po tom co bude page hotova na 1920*1080 rozliseni cca nebo jakoze n pc, tak to muzu predelat i na phone pomoci tovyho toho ze od nejakych zormeru to bude mit nejaky rozmery atd

@@ -61,7 +61,6 @@
     font-family: 'Montserrat', sans-serif;
     max-width: 750px;
     font-weight: bolder;
-    font-size: 1vw;
     margin: 10px;
     text-align: center;
 }

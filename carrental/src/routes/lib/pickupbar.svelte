@@ -104,7 +104,6 @@ p {
     color: black;
     font-family: 'Montserrat';
     font-weight: 600;
-    font-size: 1vw;
 }
 
 .dropdown p {

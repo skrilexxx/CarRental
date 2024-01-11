@@ -45,7 +45,6 @@
 .locationLabel {
     text-align: left;
     display: block;
-    font-size: 1vw;
     font-weight: 600;
     color: black;
     margin: 0;
@@ -53,14 +52,10 @@
 
 .locationAddress {
     text-align: left;
-    font-size: 0.8vw;
+    font-size: 14px;
     font-weight: 600;
     color: #626161;
     margin: 0;
 }
 
-.line {
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
 </style>
