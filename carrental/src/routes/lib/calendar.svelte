@@ -3,11 +3,14 @@
     import CalendarDays from "./calendarDays.svelte";
 
 
-    let selectedDay = 11;
     let weekDay = "Mon";
-    let selectedMonth = 9;
     let time = "10:00";
     let state = false;
+    let date = new Date();
+    let selectedDay = date.getDate();
+    let selectedMonth = date.getMonth() + 1;
+    let currentYear = date.getFullYear();
+    let year = currentYear;
 
     const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
@@ -33,6 +36,7 @@
     function changeMonthAdd() {
         if (selectedMonth == 12) {
             selectedMonth = 1;
+            year++;
         } else {
             selectedMonth++;
         }
@@ -41,10 +45,13 @@
     function changeMonthRem() {
         if (selectedMonth == 1) {
             selectedMonth = 12;
+            year--;
         } else {
             selectedMonth--;
         }
     }
+
+
 
     function changeDay() {
         return;
@@ -93,7 +100,7 @@
         </div>
 
         <div class="calendarDays">
-            <CalendarDays></CalendarDays>
+            <CalendarDays month={selectedMonth} year={year}></CalendarDays>
         </div>
     </div>
     {/if}
@@ -246,7 +253,6 @@ p {
     justify-content: center;
     width: 90%;
     height: 75%;
-    background-color: bisque;
 }
 
 @keyframes fade-in {
