@@ -110,7 +110,7 @@ p {
 .dropdown p {
     text-align: left;
     margin-left: 5%;
-    margin-top: 45px;
+    margin-top: 10%;
 }
 
 @keyframes fade-in {

@@ -63,7 +63,6 @@
     font-family: 'Montserrat', sans-serif;
     max-width: 750px;
     font-weight: medium;
-    font-size: 1vw;
     text-align: center;
 }
 
@@ -77,7 +76,6 @@ li:before {
     content: "•";
     color: white;
     font-weight: bold;
-    font-size: 1vw;
     margin-right: 0.5rem;
 }
 

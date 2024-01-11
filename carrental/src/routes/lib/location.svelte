@@ -18,7 +18,7 @@
         <p class="locationAddress">{address}</p>
     </div>
 </div>
-<img class="line" src="/dropdownline.svg" alt="dropdownline">
+
 <style>
 
 .content {
@@ -26,7 +26,11 @@
     align-items: center;
     justify-content: left;
     width: 100%;
-    height: auto;
+    padding: 10px 0px;
+}
+
+.content:not(:last-child) {
+    border-bottom: #626161 2px solid;
 }
 
 .content:hover {
