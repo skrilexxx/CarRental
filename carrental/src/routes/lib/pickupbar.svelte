@@ -2,16 +2,23 @@
 
     import Location from "./location.svelte";
 
-    let state = false;
     let location = "Pick-up location";
 
     function showDropdown() {
-        state = !state;
+        const dropdown = document.getElementById('dropdown');
+        dropdown.classList.toggle('hidden');
+
+        function handleDocumentClick(event) {
+            if (!dropdown.contains(event.target) && !event.target.classList.contains('header') && !event.target.classList.contains('icon') && !event.target.classList.contains('headerP') ) {
+                dropdown.classList.add('hidden');
+                document.removeEventListener('click', handleDocumentClick);
+            }
+        }
+
+        if (!dropdown.classList.contains('hidden')) {
+            document.addEventListener('click', handleDocumentClick);
+        }
     }
-
-
-
-
 
 
 
@@ -23,18 +30,17 @@
         <div class="icon">
             <img src="/dropdownarrow.svg" alt="dropdownarrow"/>
         </div>
-        <p>{location}</p>
+        <p class="headerP">{location}</p>
     </div>
 
-    {#if state}
-        <div class="dropdown" id="dropdown">
+        <div class="dropdown hidden" id="dropdown">
             <p>Choose pick-up location</p>
             <Location bind:selecredLocation={location} label="NC Královo Pole" address="OC, Cimburkova 4, 612 00 Brno-Královo Pole"></Location>
             <Location bind:selecredLocation={location} label="Parkoviště Hlavní nádraží" address="Benešova 52, 602 00 Brno-střed"></Location>
             <Location bind:selecredLocation={location} label="Galerie Vaňkovka" address="Ve Vaňkovce 1, 602 00 Brno-střed"></Location>
             <Location bind:selecredLocation={location} label="Parkoviště Letiště Brno-Tuřany" address="Letiště Brno-Tuřany 904/1, 627 00 Brno - Tuřany"></Location>
         </div>
-    {/if}
+
 </div>
 
 
@@ -73,6 +79,8 @@
     margin-left: 3%;
 }
 
+
+
 .dropdown {
     position: absolute;
     display: flex;
@@ -97,6 +105,10 @@
 .dropdown{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+.hidden {
+    display: none;
 }
 
 p {
