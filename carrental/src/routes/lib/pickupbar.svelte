@@ -82,7 +82,6 @@
     width: 100%;
     height: 28vh;
     border-radius: 10px;
-    margin-left: 1px;
     margin-top: 4px;
     overflow-y: scroll;
     animation-name: fade-in;

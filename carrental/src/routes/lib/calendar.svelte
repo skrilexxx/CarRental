@@ -68,7 +68,7 @@
             <img src="/calendar.svg" alt="calendar"/>
         </div>
         <div class="date">
-            <p>{weekDay} {selectedMonth}/{selectedDay}</p>
+            <p>{weekDay} {selectedDay}. {selectedMonth}.</p>
         </div>
         <img  class="line" src="/line.svg" alt="line">
         <div class="time">
@@ -186,7 +186,7 @@ p {
     border-radius: 10px;
     width: 100%;
     height: 28vh;
-    margin-top: 3px;
+    margin-top: 4px;
     animation: fade-in 0.4s;
 }
 

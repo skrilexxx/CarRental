@@ -36,6 +36,7 @@
 
   <footer>
     <p>Copyright Brno Car Rental 2023</p>
+    <a href="/TestTerms&Conditions.pdf">Terms & Conditions</a>
   </footer>
 
 
@@ -72,7 +73,7 @@
       text-decoration: none;
       color: white;
       font-family: 'Montserrat', sans-serif;
-      font-weight: 18px;
+      font-size: 16px;
       margin: 10px;
     }
 
@@ -84,6 +85,18 @@
       margin: 0 auto;
     }
 
+    footer a {
+      text-decoration: none;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      margin: 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #BC6FF1;
+    }
 
 
     .socials {
