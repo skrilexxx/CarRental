@@ -31,6 +31,19 @@
 
     function showCalendar() {
         state = !state;
+
+        function handleDocumentClick(event) {
+            if (state == false) return;
+            const calendar = document.getElementById('calendarDrop');
+            if (!calendar.contains(event.target) && !event.target.classList.contains('headerCal') && !event.target.classList.contains('calendatIcon') && !event.target.classList.contains('icon') && !event.target.classList.contains('line') && !event.target.classList.contains('time') && !event.target.classList.contains('date') && !event.target.classList.contains('dateDiv') && !event.target.classList.contains('monthTime') && !event.target.classList.contains('month') && !event.target.classList.contains('arrowleft') && !event.target.classList.contains('arrowright') && !event.target.classList.contains('timeIn') && !event.target.classList.contains('calendarDays') && !event.target.classList.contains('calendar') && !event.target.classList.contains('monthTime') && !event.target.classList.contains('month') && !event.target.classList.contains('arrowleft') && !event.target.classList.contains('arrowright') && !event.target.classList.contains('timeIn') && !event.target.classList.contains('calendarDays') && !event.target.classList.contains('calendar') ) {
+                state = false;
+                document.removeEventListener('click', handleDocumentClick);
+            }
+        }
+
+        if (state) {
+            document.addEventListener('click', handleDocumentClick);
+        }
     }
 
     function changeMonthAdd() {
@@ -63,22 +76,22 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="content">
-    <div class="header" on:click={showCalendar}>
+    <div class="headerCal" on:click={showCalendar}>
         <div class="icon">
-            <img src="/calendar.svg" alt="calendar"/>
+            <img src="/calendar.svg" alt="calendar" class="calendatIcon"/>
         </div>
-        <div class="date">
-            <p>{weekDay} {selectedDay}. {selectedMonth}.</p>
+        <div class="dateDiv">
+            <p class="date">{weekDay} {selectedDay}. {selectedMonth}.</p>
         </div>
         <img  class="line" src="/line.svg" alt="line">
         <div class="time">
-            <p>{time}</p>
+            <p class="time">{time}</p>
         </div>
     </div>
 
 
     {#if state}
-    <div class="calendar">
+    <div class="calendar" id="calendarDrop">
         <div class="monthTime">
             <div class="arrowleft" on:click={changeMonthRem}>
                 <img src="/arrowLeft.svg" alt="arrowleft"/>
@@ -94,8 +107,8 @@
 
             <img  class="lineIn" src="/line.svg" alt="line">
 
-            <div class="time">
-                <p>{time}</p>
+            <div class="timeIn">
+                <p class="timeIn">{time}</p>
             </div>
         </div>
 
@@ -120,7 +133,7 @@
     position: relative;
 }
 
-.header {
+.headerCal {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -131,7 +144,7 @@
     height: 100%;
 }
 
-.header:hover {
+.headerCal:hover {
     cursor: pointer;
 }
 
@@ -164,7 +177,7 @@
     margin: 3px;
 }
 
-.calendar .time {
+.calendar .timeIn {
     margin: 5px;
 
 }

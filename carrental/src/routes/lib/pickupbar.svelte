@@ -9,7 +9,7 @@
         dropdown.classList.toggle('hidden');
 
         function handleDocumentClick(event) {
-            if (!dropdown.contains(event.target) && !event.target.classList.contains('header') && !event.target.classList.contains('icon') && !event.target.classList.contains('headerP') ) {
+            if (!dropdown.contains(event.target) && !event.target.classList.contains('header') && !event.target.classList.contains('icon') && !event.target.classList.contains('headerP') && !event.target.classList.contains('dropdownarrow') ) {
                 dropdown.classList.add('hidden');
                 document.removeEventListener('click', handleDocumentClick);
             }
@@ -28,7 +28,7 @@
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div class="header" on:click={showDropdown}>
         <div class="icon">
-            <img src="/dropdownarrow.svg" alt="dropdownarrow"/>
+            <img src="/dropdownarrow.svg" alt="dropdownarrow" class="dropdownarrow"/>
         </div>
         <p class="headerP">{location}</p>
     </div>
