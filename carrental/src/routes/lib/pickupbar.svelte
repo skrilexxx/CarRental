@@ -1,8 +1,12 @@
 <script>
 
     import Location from "./location.svelte";
+    import Checkbox from "./checkbox.svelte";
 
     let location = "Pick-up location";
+
+    let aged30_65 = false;
+    let youngDriver = false;
 
     function showDropdown() {
         const dropdown = document.getElementById('dropdown');
@@ -20,6 +24,11 @@
         }
     }
 
+    function check(aged30_65, youngDriver) {
+        console.log({aged30_65}, {youngDriver});
+    }
+
+    $: check(aged30_65, youngDriver);
 
 
 </script>
@@ -40,6 +49,11 @@
             <Location bind:selecredLocation={location} label="Galerie Vaňkovka" address="Ve Vaňkovce 1, 602 00 Brno-střed"></Location>
             <Location bind:selecredLocation={location} label="Parkoviště Letiště Brno-Tuřany" address="Letiště Brno-Tuřany 904/1, 627 00 Brno - Tuřany"></Location>
         </div>
+
+    <div  class="checkboxes">
+        <Checkbox bind:checked={aged30_65} label="Driver aged 30-65?" name="aged30-65" id="aged30-65" value="aged30-65"></Checkbox>
+        <Checkbox bind:checked={youngDriver} label="Young driver (18-22)?" name="youngDriver" id="youngDriver" value="youngDriver"></Checkbox>
+    </div>
 
 </div>
 
@@ -121,6 +135,12 @@ p {
     text-align: left;
     margin-left: 5%;
     margin-top: 10%;
+}
+
+.checkboxes {
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
 @keyframes fade-in {
