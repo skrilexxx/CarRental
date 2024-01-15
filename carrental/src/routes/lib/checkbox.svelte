@@ -38,7 +38,6 @@
     display: flex;
     align-items: center;
     justify-content: left;
-    width: 21%;
     height: 100%;
     margin-top: 6px;
     padding: 0.5em;

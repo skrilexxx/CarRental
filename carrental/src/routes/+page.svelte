@@ -52,7 +52,7 @@
 
 .title {
     display: flex;
-    max-width: 500px;
+    max-width: 100%;
     justify-content: left;
     align-items: left;
 }
