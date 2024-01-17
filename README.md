@@ -1,5 +1,5 @@
 # CarRental
-CarRental FT - it is web page for Car rental company, it is my maturita exam project.
+CarRental FE - it is web page for Car rental company, it is my maturita exam project.
 
 [brnocarrental.cz](https://www.brnocarrental.cz/)
 
