@@ -1,5 +1,8 @@
 <script>
 
+    import CarCard from "../lib/carCard.svelte";
+    import FilterBar from "../lib/filterBar.svelte";
+
 </script>
 
 <div class="contentTitle">
@@ -9,7 +12,14 @@
 </div>
 <div class="content">
     <div class="home">
-        <p>Car List page content</p>
+        <FilterBar></FilterBar>
+        <div class="cards">
+            <CarCard></CarCard>
+            
+        </div>
+
+
+        
     </div>
 </div>
 
@@ -43,18 +53,26 @@
     align-items: left;
 }
 
-.home p {
-    display: inline;
-    font-family: 'Montserrat', sans-serif;
-    max-width: 750px;
-    font-weight: medium;
-    text-align: center;
-}
-
 .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 1300px;
     width: 100%;
     text-align: left;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    min-height: 603px;
+    max-width: 700px;
+    width: 100%;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 </style>
