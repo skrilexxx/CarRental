@@ -56,7 +56,6 @@
 .home {
     display: flex;
     justify-content: center;
-    align-items: center;
     max-width: 1300px;
     width: 100%;
     text-align: left;
@@ -67,7 +66,7 @@
     flex-direction: column;
     align-items: center;
     height: auto;
-    min-height: 603px;
+    min-height: 585px;
     max-width: 700px;
     width: 100%;
     text-align: left;

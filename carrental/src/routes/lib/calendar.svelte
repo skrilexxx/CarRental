@@ -35,7 +35,8 @@
         function handleDocumentClick(event) {
             if (state == false) return;
             const calendar = document.getElementById('calendarDrop');
-            if (!calendar.contains(event.target) && !event.target.classList.contains('headerCal') && !event.target.classList.contains('calendatIcon') && !event.target.classList.contains('icon') && !event.target.classList.contains('line') && !event.target.classList.contains('time') && !event.target.classList.contains('date') && !event.target.classList.contains('dateDiv') && !event.target.classList.contains('monthTime') && !event.target.classList.contains('month') && !event.target.classList.contains('arrowleft') && !event.target.classList.contains('arrowright') && !event.target.classList.contains('timeIn') && !event.target.classList.contains('calendarDays') && !event.target.classList.contains('calendar') && !event.target.classList.contains('monthTime') && !event.target.classList.contains('month') && !event.target.classList.contains('arrowleft') && !event.target.classList.contains('arrowright') && !event.target.classList.contains('timeIn') && !event.target.classList.contains('calendarDays') && !event.target.classList.contains('calendar') ) {
+            //predelat tento line 38 aby to byo lip citelny az budu delat kalendar ten zbytek
+            if (!calendar.contains(event.target) && !event.target.classList.contains('headerCal') && !event.target.classList.contains('calendatIcon') && !event.target.classList.contains('icon') && !event.target.classList.contains('line') && !event.target.classList.contains('year') && !event.target.classList.contains('date') && !event.target.classList.contains('dateDiv') && !event.target.classList.contains('monthTime') && !event.target.classList.contains('month') && !event.target.classList.contains('arrowleft') && !event.target.classList.contains('arrowright') && !event.target.classList.contains('yearIn') && !event.target.classList.contains('calendarDays') && !event.target.classList.contains('calendar') && !event.target.classList.contains('monthTime') && !event.target.classList.contains('month') && !event.target.classList.contains('yearIn') && !event.target.classList.contains('calendarDays')  ) {
                 state = false;
                 document.removeEventListener('click', handleDocumentClick);
             }
@@ -84,8 +85,8 @@
             <p class="date">{weekDay} {selectedDay}. {selectedMonth}.</p>
         </div>
         <img  class="line" src="/line.svg" alt="line">
-        <div class="time">
-            <p class="time">{time}</p>
+        <div class="year">
+            <p class="year">{year}</p>
         </div>
     </div>
 
@@ -107,8 +108,8 @@
 
             <img  class="lineIn" src="/line.svg" alt="line">
 
-            <div class="timeIn">
-                <p class="timeIn">{time}</p>
+            <div class="yearIn">
+                <p class="yearIn">{year}</p>
             </div>
         </div>
 
@@ -173,11 +174,11 @@
     margin-right: 1%;
 }
 
-.time  {
+.year  {
     margin: 3px;
 }
 
-.calendar .timeIn {
+.calendar .yearIn {
     margin: 5px;
 
 }

@@ -13,7 +13,15 @@
     <div class="price part">
         <p class="title">Price per day</p>
         <Checkbox label="0-50€" name="price" id="price1" value="price1"></Checkbox>
+        <hr class="line">
     </div>
+
+    <div class="type part">
+        <p class="title">Type</p>
+        <Checkbox label="Sedan" name="type" id="type1" value="type1"></Checkbox>
+        <hr class="line">
+    </div>
+
 </div>
 
 
@@ -24,7 +32,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 18vw;
     max-width: 250px;
     height: 585px;
@@ -34,6 +41,10 @@
     margin-top: 10px;
     border: 4px solid #626161;
 
+}
+
+.title {
+    margin-top: 10px;
 }
 
 .label {
@@ -60,7 +71,6 @@ h3 {
     margin-bottom: 0;
     border-color: #D9D9D9;
     border-style: solid;
-    height: 2px;
 }
 
 .part {
@@ -77,10 +87,13 @@ p {
     display: inline;
     width: 80%;
     color: black;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
 }
 
-
+.part :global(.Checkbox) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 </style>
