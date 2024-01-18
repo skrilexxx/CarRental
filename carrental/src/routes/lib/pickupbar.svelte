@@ -134,7 +134,7 @@ p {
 .dropdown p {
     text-align: left;
     margin-left: 5%;
-    margin-top: 10%;
+    margin-top: 10vh;
 }
 
 .checkboxes {

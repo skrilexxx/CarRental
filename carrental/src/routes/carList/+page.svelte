@@ -15,11 +15,11 @@
         <FilterBar></FilterBar>
         <div class="cards">
             <CarCard></CarCard>
-            
+
         </div>
 
 
-        
+
     </div>
 </div>
 
@@ -56,7 +56,7 @@
 .home {
     display: flex;
     justify-content: center;
-    max-width: 1300px;
+    max-width: 1760px;
     width: 100%;
     text-align: left;
 }
@@ -67,8 +67,8 @@
     align-items: center;
     height: auto;
     min-height: 585px;
-    max-width: 700px;
-    width: 100%;
+    max-width: 1000px;
+    min-width: 800px; /* docasne snad se to pak zmeni aby to bylo trochu resposive az tam neco bude 800px */
     text-align: left;
     margin-left: 20px;
     margin-right: 20px;

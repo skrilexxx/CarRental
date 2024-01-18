@@ -17,7 +17,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="content" on:click={check}>
-    <input type="checkbox" id={id} name={name} value={value}>
+    <input type="checkbox" class="$$props.class" id={id} name={name} value={value}>
 
     <label for={id}>
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none">

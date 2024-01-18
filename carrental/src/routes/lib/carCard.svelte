@@ -4,7 +4,7 @@
 
 
 <div class="carCard">
-    
+
 </div>
 
 
@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 650px;
+    max-width: 850px;
     height: 160px;
     background-color: white;
     border-radius: 15px;
