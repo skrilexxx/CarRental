@@ -97,9 +97,6 @@
 
 .dropdown {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background-color: white;
     width: 100%;
     height: 28vh;
@@ -134,7 +131,7 @@ p {
 .dropdown p {
     text-align: left;
     margin-left: 5%;
-    margin-top: 10vh;
+    margin-top: 30px;
 }
 
 .checkboxes {
