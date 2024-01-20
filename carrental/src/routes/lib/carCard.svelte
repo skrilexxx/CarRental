@@ -18,7 +18,7 @@
 <div class="carCard">
     <div class="content">
         <div class="picture">
-            <img class="carPic" src="/testCar.png" alt="testCar">
+            <img class="carPic" src="/testCar/testCar.png" alt="testCar">
         </div>
 
         <div class="info">

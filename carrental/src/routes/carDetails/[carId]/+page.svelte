@@ -27,15 +27,33 @@
     <div class="pictures">
         <h2>{carName}</h2>
         <div class="mainPicture">
-            <img class="carPic" src="/testCar.png" alt="testCar">
+            <img class="carPic" src="/testCar/testCar.png" alt="testCar">
         </div>
 
         <div class="otherPictures">
-
+            <div class="smallPic">
+                <img class="carPic" src="/testCar/testCar2.png" alt="testCar">
+            </div>
+            <div class="smallPic">
+                <img class="carPic" src="/testCar/testCar3.png" alt="testCar">
+            </div>
+            <div class="smallPic">
+                <img class="carPic" src="/testCar/testCar4.png" alt="testCar">
+            </div>
+            <div class="smallPic">
+                <img class="carPic" src="/testCar/testCar5.png" alt="testCar">
+            </div>
+            <div class="smallPic">
+                <img class="carPic" src="/testCar/testCar6.png" alt="testCar">
+            </div>
+            <div class="smallPic">
+                <img class="carPic" src="/testCar/testCar7.png" alt="testCar">
+            </div>
         </div>
     </div>
 
     <div class="info">
+        <h2 class="invisible">Brno CarRental</h2>
         <div class="title">
             <p>Specifications</p>
         </div>
@@ -109,7 +127,6 @@
 .content {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
@@ -124,6 +141,32 @@
     margin: 0px 40px ;
     padding: 0;
     max-width: 1760px;
+}
+
+.otherPictures {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    height: 60px;
+    margin: 10px 0px ;
+    padding: 0;
+}
+
+.smallPic {
+    width: 100px;
+    height: 60px;
+    margin-right: 10px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.carPic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .mainPicture {
@@ -171,6 +214,16 @@
     text-align: left;
 }
 
+.invisible {
+    color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 
 .line {
     display: flex;
@@ -214,6 +267,7 @@ h2 {
 .title p {
     font-size: 22px;
     font-weight: 600;
+    margin-top: 0;
 }
 
 .price p {
