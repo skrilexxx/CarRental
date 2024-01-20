@@ -11,7 +11,7 @@
         <Pickupbar></Pickupbar>
         <Calendar></Calendar>
         <Calendar></Calendar>
-        <Button label="Search"></Button>
+        <Button label="Search" path="/carList"></Button>
     </div>
 
 </div>

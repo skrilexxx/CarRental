@@ -64,7 +64,7 @@
         <p class="title">Price per day</p>
         <Checkbox  bind:checked={filters["price1"]} label="€0 - €50" name="price" id="price1" value="price1"></Checkbox>
         <Checkbox  bind:checked={filters["price2"]} label="€50 - €100" name="price" id="price2" value="price2"></Checkbox>
-        <Checkbox  bind:checked={filters["price3"]} label="€100 - €150€" name="price" id="price3" value="price3"></Checkbox>
+        <Checkbox  bind:checked={filters["price3"]} label="€100 - €150" name="price" id="price3" value="price3"></Checkbox>
         <Checkbox  bind:checked={filters["price4"]} label="€150 - €200" name="price" id="price4" value="price4"></Checkbox>
         <Checkbox  bind:checked={filters["price5"]} label="€200 +" name="price" id="price5" value="price5"></Checkbox>
         <hr class="line">

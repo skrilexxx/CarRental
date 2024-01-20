@@ -1,9 +1,10 @@
 <script>
 
     export let label;
+    export let path;
 
     function search () {
-        window.location.href = "/carList";
+        window.location.href = path;
     }
 
 </script>

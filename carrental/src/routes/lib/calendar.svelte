@@ -15,7 +15,7 @@
     const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
     const months =  {
-        1: "Janary",
+        1: "January",
         2: "February",
         3: "March",
         4: "April",
