@@ -2,6 +2,8 @@
 
     import Button from "../lib/button.svelte";
 
+    let carId = "1";
+    let path = "/carDetails/" + carId;
     let carName = "BMW 330d xDrive Touring";
     let seats = "5";
     let fuel = "Diesel";
@@ -40,7 +42,7 @@
                 </div>
             </div>
             <div class="button">
-                <Button label={buttontext} path="/carList"></Button>
+                <Button label={buttontext} path={path}></Button>
             </div>
         </div>
     </div>

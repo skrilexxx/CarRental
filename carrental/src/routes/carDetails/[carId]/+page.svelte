@@ -1,0 +1,248 @@
+<script>
+
+    import { page } from "$app/stores";
+    import Button from "../../lib/Button.svelte";
+
+    const carId = $page.params.carId;
+
+    let carName = "BMW 330d xDrive Touring";
+    let model = "G21";
+    let seats = "5";
+    let fuel = "Diesel";
+    let transmission = "Manual";
+    let strokeVolume = "2 993 cm³";
+    let enginePower = "195 kW";
+    let year = "2019";
+    let consumption = "8.8";
+    let price = "129";
+
+
+</script>
+
+
+<div class="content">
+
+
+
+    <div class="pictures">
+        <h2>{carName}</h2>
+        <div class="mainPicture">
+            <img class="carPic" src="/testCar.png" alt="testCar">
+        </div>
+
+        <div class="otherPictures">
+
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="title">
+            <p>Specifications</p>
+        </div>
+
+        <div class="specs">
+
+            <div class="what">
+                <p>Model:</p>
+                <p>Transmission:</p>
+                <p>Engine power:</p>
+                <p>Stroke volume:</p>
+                <p>Fuel type:</p>
+                <p>Year:</p>
+                <p>Seats:</p>
+                <p>Luggage:</p>
+                <p>Consumption:</p>
+            </div>
+            <div class="value">
+                <p>{model}</p>
+                <p>{transmission}</p>
+                <p>{enginePower}</p>
+                <p>{strokeVolume}</p>
+                <p>{fuel}</p>
+                <p>{year}</p>
+                <p>{seats}</p>
+                <p>3 big + 2 small</p>
+                <p>{consumption} l/100km</p>
+            </div>
+        </div>
+
+        <div class="included">
+            <div class="title">
+                <p>Included in the price</p>
+            </div>
+            <div class="line">
+                <img src="/purpleCheck.svg" alt="purpleCheck">
+                <p>Free cancellation up to 48 hours before pick-up</p>
+            </div>
+            <div class="line">
+                <img src="/purpleCheck.svg" alt="purpleCheck">
+                <p>Theft Protection with € 3 250 excess</p>
+            </div>
+            <div class="line">
+                <img src="/purpleCheck.svg" alt="purpleCheck">
+                <p>Free assistance services 24/7</p>
+            </div>
+            <div class="line">
+                <img src="/purpleCheck.svg" alt="purpleCheck">
+                <p>Unlimited mileage</p>
+            </div>
+        </div>
+
+        <div class="book">
+            <div class="price">
+                <p>Price</p>
+                <p>{price} € / Day</p>
+            </div>
+            <div class="button">
+                <Button label="Book now" path="/"></Button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<style>
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    max-width: 1760px;
+}
+
+.pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    margin: 0px 40px ;
+    padding: 0;
+    max-width: 1760px;
+}
+
+.mainPicture {
+    max-width: 700px;
+    max-height: 420px;
+    border-radius: 15px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin: 0px 40px ;
+    padding: 0;
+    max-width: 1760px;
+}
+
+.specs {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.what {
+    margin-right: 60px;
+}
+
+.value {
+    margin-left: 60px
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    text-align: left;
+}
+
+
+.line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 0px;
+}
+
+.line img {
+    margin-right: 10px;
+}
+
+.line p {
+    margin: 4px 0px;
+    font-size: 15px;
+}
+
+.included .title p {
+    margin: 10px 0px;
+}
+
+h2 {
+    display: inline;
+    width: 100%;
+    text-align: left;
+    margin: 30px 0px;
+}
+
+.what p {
+    width: 100%;
+    text-align: left;
+    margin: 0px 0px;
+}
+
+.value p {
+    width: 100%;
+    text-align: right;
+    margin: 0px 0px;
+}
+
+.title p {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.price p {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0px 0px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.button :global(button) {
+    width: 100%;
+    max-width: 400px;
+    height: 60px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+</style>
