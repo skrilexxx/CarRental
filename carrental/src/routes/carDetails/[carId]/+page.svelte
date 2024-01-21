@@ -16,6 +16,8 @@
     let consumption = "8.8";
     let price = "129";
 
+    let path = "/carDetails/" + carId + "/bookNow";
+
     let shownPicture = "/testCar/testCar.png";
 
     function changePicture(){
@@ -120,7 +122,7 @@
                 <p>{price} € / Day</p>
             </div>
             <div class="button">
-                <Button label="Book now" path="/"></Button>
+                <Button label="Book now" path={path}></Button>
             </div>
         </div>
     </div>

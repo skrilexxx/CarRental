@@ -3,12 +3,12 @@
 	import Calendar from "./calendar.svelte";
     import Pickupbar from "./pickupbar.svelte";
 
-
+    export let location;
 </script>
 
 <div class="barBg">
     <div class="searchbar">
-        <Pickupbar></Pickupbar>
+        <Pickupbar {location}></Pickupbar>
         <Calendar></Calendar>
         <Calendar></Calendar>
         <Button label="Search" path="/carList"></Button>
