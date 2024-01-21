@@ -10,11 +10,17 @@
     let seats = "5";
     let fuel = "Diesel";
     let transmission = "Manual";
-    let strokeVolume = "2 993 cm³";
+    let engineDisplacement = "2 993 cm³";
     let enginePower = "195 kW";
     let year = "2019";
     let consumption = "8.8";
     let price = "129";
+
+    let shownPicture = "/testCar/testCar.png";
+
+    function changePicture(){
+        shownPicture = event.target.src;
+    }
 
 
 </script>
@@ -27,26 +33,28 @@
     <div class="pictures">
         <h2>{carName}</h2>
         <div class="mainPicture">
-            <img class="carPic" src="/testCar/testCar.png" alt="testCar">
+            <img class="carPic" src={shownPicture} alt="testCar">
         </div>
 
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+
         <div class="otherPictures">
-            <div class="smallPic">
-                <img class="carPic" src="/testCar/testCar2.png" alt="testCar">
+            <div class="smallPic" on:click={changePicture}>
+                <img class="carPic" src="/testCar/testCar.png" alt="testCar">
             </div>
-            <div class="smallPic">
+            <div class="smallPic" on:click={changePicture}>
                 <img class="carPic" src="/testCar/testCar3.png" alt="testCar">
             </div>
-            <div class="smallPic">
+            <div class="smallPic" on:click={changePicture}>
                 <img class="carPic" src="/testCar/testCar4.png" alt="testCar">
             </div>
-            <div class="smallPic">
+            <div class="smallPic" on:click={changePicture}>
                 <img class="carPic" src="/testCar/testCar5.png" alt="testCar">
             </div>
-            <div class="smallPic">
+            <div class="smallPic" on:click={changePicture}>
                 <img class="carPic" src="/testCar/testCar6.png" alt="testCar">
             </div>
-            <div class="smallPic">
+            <div class="smallPic" on:click={changePicture}>
                 <img class="carPic" src="/testCar/testCar7.png" alt="testCar">
             </div>
         </div>
@@ -64,7 +72,7 @@
                 <p>Model:</p>
                 <p>Transmission:</p>
                 <p>Engine power:</p>
-                <p>Stroke volume:</p>
+                <p>Engine displacement:</p>
                 <p>Fuel type:</p>
                 <p>Year:</p>
                 <p>Seats:</p>
@@ -75,7 +83,7 @@
                 <p>{model}</p>
                 <p>{transmission}</p>
                 <p>{enginePower}</p>
-                <p>{strokeVolume}</p>
+                <p>{engineDisplacement}</p>
                 <p>{fuel}</p>
                 <p>{year}</p>
                 <p>{seats}</p>
@@ -160,6 +168,8 @@
     margin-right: 10px;
     padding: 0;
     border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .carPic {
@@ -172,6 +182,8 @@
 .mainPicture {
     max-width: 700px;
     max-height: 420px;
+    width: 100%;
+    height: 100%;
     border-radius: 15px;
 }
 
@@ -285,7 +297,7 @@ h2 {
 
 .button :global(button) {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     height: 60px;
     margin: 0px 0px;
     padding: 0px 0px;
