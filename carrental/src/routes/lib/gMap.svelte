@@ -7,7 +7,6 @@
     export let location;
 
     function changeMap(location) {
-        console.log(location);
         if (location == "Pick-up location") {
             map = maplocations.default;
         }
@@ -45,7 +44,6 @@
 .map {
     display: flex;
     margin: 10px 0px;
-    height: 180px;
     width: 60%;
     border-radius: 10px;
 }
