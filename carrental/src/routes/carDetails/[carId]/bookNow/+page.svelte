@@ -1,7 +1,7 @@
 <script>
     import { page } from "$app/stores";
     import SearchBar from "../../../lib/searchbar.svelte";
-    import { mapLocations } from "../../../lib/mapLocations.js";
+    import GMap from "../../../lib/gMap.svelte";
 
 
     let carName = "BMW 330d xDrive Touring";
@@ -13,13 +13,17 @@
     let enginePower = "195 kW";
     let year = "2019";
     let consumption = "8.8";
-    let price = "129";
+    let price = "169";
+
+
+    let days = 5; //udelat aby to pocitalo podle tech dni co si vybere uzivatel - az bude kalendar
+    let rentalPrice = parseInt(price) * days
+    let insuracePrice = 60;
+    let totalPrice = rentalPrice + insuracePrice;
 
     let picture = "/testCar/testCar.png";
 
-    let location = "Pick-up location";
-
-    let maplocations = mapLocations;
+    let selectedlocation = "Pick-up location";
 
 
 </script>
@@ -71,23 +75,38 @@
 
         <div class="bookInfo">
             <div class="pickup">
-                <SearchBar {location}></SearchBar>
+                <SearchBar bind:location={selectedlocation}></SearchBar>
             </div>
             <div class="book">
-                <div class="map" id="gMap">
-                    <!-- udelat map component -->
-                    <!-- svelte-ignore a11y-missing-attribute -->
-                    <iframe class="gMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.1358066540374!2d16.606107544932083!3d49.216951492427064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47129472061d2553%3A0x5b8fe721df46e80!2sNC%20Kr%C3%A1lovo%20Pole!5e0!3m2!1sen!2scz!4v1705945028585!5m2!1sen!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                </div>
+                <GMap location={selectedlocation} ></GMap>
 
                 <div class="priceInfo">
                     <div class="price">
-                        <h2>Price</h2>
+                        <div class="priceTitle">
+                            <h2>Price</h2>
+                        </div>
 
                         <div class="text">
-
+                            <div class="item">
+                                <p>Price of car rental</p>
+                                <p>Insurance</p>
+                            </div>
+                            <div class="itemPrice">
+                                <p>{rentalPrice} €</p>
+                                <p>{insuracePrice} €</p>
+                            </div>
                         </div>
+                        <hr class="greyLine">
+                        <div class="finalPrice">
+                            <div class="item">
+                                <p>Final price</p>
+                            </div>
+                            <div class="itemPrice">
+                                <p>{totalPrice} €</p>
+                            </div>
+                        </div>
+
 
                     </div>
 
@@ -230,10 +249,10 @@ p {
 }
 
 h2 {
-    display: inline;
     width: 100%;
     text-align: left;
     font-size: 22px;
+    padding: 0;
 }
 
 .bookInfo {
@@ -270,7 +289,7 @@ h2 {
 
 
 .pickup :global(.dropdown) {
-    width: 400px;
+    width: 475px;
 }
 
 
@@ -311,19 +330,6 @@ h2 {
     justify-content: center;
 }
 
-.map {
-    display: flex;
-    margin: 10px 0px;
-    height: 180px;
-    width: 60%;
-    border-radius: 10px;
-}
-
-.gMap {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
 
 .priceInfo {
     display: flex;
@@ -337,7 +343,7 @@ h2 {
 
 .price {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 10px 0px;
@@ -372,6 +378,7 @@ h2 {
 }
 
 .price h2 {
+    width: 100%;
     margin: 0px 20px;
     font-size: 18px;
     color: black;
@@ -379,12 +386,79 @@ h2 {
 
 .price .text {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: 0px 20px;
     width: 100%;
     height: 100%;
+}
+
+
+.price .item {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.price .itemPrice {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    width: 50%;
+    height: 100%;
+}
+
+.price .itemPrice p{
+    color: black;
+    font-weight: 600;
+    text-align: right;
+    margin: 5px 0px;
+}
+
+.price .item p{
+    color: black;
+    font-weight: 600;
+    text-align: left;
+    margin: 5px 0px;
+}
+
+.price .priceTitle {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.finalPrice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.finalPrice .item p {
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.finalPrice .itemPrice p {
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.greyLine {
+    width: 90%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-color: #D9D9D9;
+    border-style: solid;
 }
 
 </style>

@@ -8,7 +8,7 @@
 
 <div class="barBg">
     <div class="searchbar">
-        <Pickupbar {location}></Pickupbar>
+        <Pickupbar bind:location = {location}></Pickupbar>
         <Calendar></Calendar>
         <Calendar></Calendar>
         <Button label="Search" path="/carList"></Button>

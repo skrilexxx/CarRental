@@ -2,8 +2,8 @@
 
     import Location from "./location.svelte";
     import Checkbox from "./checkbox.svelte";
-
     export let location = "Pick-up location";
+
 
     let aged30_65 = false;
     let youngDriver = false;

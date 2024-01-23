@@ -14,7 +14,7 @@
     let enginePower = "195 kW";
     let year = "2019";
     let consumption = "8.8";
-    let price = "129";
+    let price = "169";
 
     let path = "/carDetails/" + carId + "/bookNow";
 

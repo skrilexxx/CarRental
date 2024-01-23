@@ -8,7 +8,7 @@
     let seats = "5";
     let fuel = "Diesel";
     let transmission = "Manual";
-    let price = "129";
+    let price = "169";
     let buttontext = "Price " + price + "€ / Day";
 
 
