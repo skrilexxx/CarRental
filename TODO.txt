@@ -1,17 +1,10 @@
-x   1. title - done
-x   2. navigation - done
-x   3. smaller titles - done
-x   4. About text zformatovat - done
-x   4.5 udělat univerzální button co se použije v searchbaru - done
-    5. search bar - 95%
-x   6. contact text formatovat - done
-x   6.5 fonty fix - done
-    7. stahovani kalendare od nekud idk, potrebuju vedet kolik ma mesic dni a jakej den zacina, nacitani current date asi ze serveru
-    8. dodělat vybíraní dne kalendáře
-x   9. dropdown na lokace - pridat hide scrollbar na firefox je to jen na chrome done (jen fixnout ty lines) - done
-x   9.5 zavirani dropdownu kdyz kliknu jinam - 95% trosku problemy s calendar, zkusit s ondrou poresit
-x   10. checkboxy - done
-    11. fix calendar scaleble text na non scalable
-    12. Předělat stylování do global.css, at je to vsude stejný anemuím to psat vsede, treba ten popul atd, abz ten odz byl lepsi
-x   13. Logo je done
-    Po tom co bude page hotova na 1920*1080 rozliseni cca nebo jakoze n pc, tak to muzu predelat i na phone pomoci tovyho toho ze od nejakych zormeru to bude mit nejaky rozmery atd
+5. search bar - 95%
+7. stahovani kalendare od nekud idk, potrebuju vedet kolik ma mesic dni a jakej den zacina, nacitani current date asi ze serveru
+8. dodělat vybíraní dne kalendáře
+11. fix calendar scaleble text na non scalable
+12. Předělat stylování do global.css, at je to vsude stejný anemuím to psat vsede, treba ten popul atd, abz ten odz byl lepsi
+Po tom co bude page hotova na 1920*1080 rozliseni cca nebo jakoze n pc, tak to muzu predelat i na phone pomoci tovyho toho ze od nejakych zormeru to bude mit nejaky rozmery atd
+13. az bude kalendar tak udelat pocitani ceny podle vybranych dni
+14. na konec potom instrikce k vyzvdenuti, podminky, smlouvy, pro maturitni praci musi byt rezervace zdarma
+15. mozna oddelat z car listu ten title Car List
+16. predelat book now pravou cast na komponent a trochu zredukovat css v book now

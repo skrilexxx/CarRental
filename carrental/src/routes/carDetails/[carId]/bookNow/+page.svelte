@@ -137,18 +137,18 @@
     margin: 10px 0px;
 }
 
-p {
-    margin: 4px 0px;
-    font-size: 15px;
-}
-
-
 
 .title p {
     font-size: 22px;
     font-weight: 600;
     margin-top: 0;
 }
+
+p {
+    margin: 4px 0px;
+    font-size: 15px;
+}
+
 
 h2 {
     width: 100%;
@@ -263,6 +263,10 @@ h2 {
     margin: 0px;
 }
 
+.included {
+    width: 100%;
+}
+
 .line {
     display: flex;
     flex-direction: row;
@@ -276,7 +280,7 @@ h2 {
 
 .line p {
     margin: 6px 0px;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .price h2 {

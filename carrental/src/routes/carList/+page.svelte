@@ -7,7 +7,7 @@
 
 <div class="contentTitle">
     <div class="title">
-        <h2>Car List</h2>
+        <h2>Car List</h2> <!--mozna oddelat -->
     </div>
 </div>
 <div class="content">
