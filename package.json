@@ -1,5 +1,0 @@
-{
-  "dependencies": {
-    "svelte-persisted-store": "^0.9.0"
-  }
-}

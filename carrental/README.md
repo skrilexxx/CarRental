@@ -18,7 +18,6 @@ npm create svelte@latest my-app
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-(Maybe needed ) -> Also install [`svelte-persisted-store`](https://github.com/joshnuss/svelte-persisted-store.git) with `npm install svelte-persisted-store`
 
 ```bash
 npm run dev
