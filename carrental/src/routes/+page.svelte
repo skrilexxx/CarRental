@@ -7,7 +7,7 @@
 
 <div class="contentTitle">
     <div class="title">
-        <h2>Rent Car in Brno</h2>
+        <h2 class="mainTitle" >Rent Car in Brno</h2>
     </div>
 </div>
 
@@ -63,6 +63,10 @@
     font-weight: bolder;
     margin: 10px;
     text-align: center;
+}
+
+.mainTitle {
+    padding-left: 0.2vw;
 }
 
 

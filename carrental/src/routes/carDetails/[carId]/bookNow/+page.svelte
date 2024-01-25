@@ -1,5 +1,4 @@
 <script>
-    import { page } from "$app/stores";
     import SearchBar from "../../../lib/searchbar.svelte";
     import GMap from "../../../lib/gMap.svelte";
     import CarInfo from "../../../lib/bookCarInfo.svelte";
@@ -32,7 +31,7 @@
 
                 <GMap location={selectedlocation} ></GMap>
 
-                <PriceInfo></PriceInfo>
+                <PriceInfo days=5> </PriceInfo>
             </div>
 
         </div>

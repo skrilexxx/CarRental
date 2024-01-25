@@ -2,7 +2,7 @@
 
     
     let price = "169";
-    let days = 5; //udelat aby to pocitalo podle tech dni co si vybere uzivatel - az bude kalendar
+    export let days = 5; //udelat aby to pocitalo podle tech dni co si vybere uzivatel - az bude kalendar
     let rentalPrice = parseInt(price) * days
     let insuracePrice = 60;
     let totalPrice = rentalPrice + insuracePrice;

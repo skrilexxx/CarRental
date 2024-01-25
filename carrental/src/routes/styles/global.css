@@ -28,6 +28,7 @@ body {
     background-image: url('/brnoBackground2x.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top;
     background-color: #12110F;
   }
 
