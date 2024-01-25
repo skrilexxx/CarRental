@@ -36,4 +36,8 @@
     width: 100%;
 }
 
+.searchbar :global(button) {
+    max-width: 200px;
+}
+
 </style>

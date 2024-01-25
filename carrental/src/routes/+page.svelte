@@ -14,7 +14,6 @@
 
 <div class="content">
     <Searchbar/>
-    <!-- Checkboxes, mozna v searchbaru idk  -->
 
     <br><br><br><br><br>
     <div class="home">

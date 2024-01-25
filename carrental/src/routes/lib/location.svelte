@@ -1,8 +1,9 @@
 <script>
+    import { pickupLocation } from "../stores/mapLocations";
 
     export let label;
     export let address;
-    export let selecredLocation = "Pick-up location";
+    export let selecredLocation = $pickupLocation;
 
     function selectLocation() {
         selecredLocation = label;

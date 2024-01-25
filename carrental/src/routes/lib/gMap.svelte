@@ -1,5 +1,5 @@
 <script>
-    import { mapLocations } from "./mapLocations.js";
+    import { mapLocations } from "../stores/mapLocations.js";
     import { onMount } from "svelte";
 
     let maplocations = mapLocations;

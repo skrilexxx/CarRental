@@ -3,39 +3,46 @@
     import GMap from "../../../lib/gMap.svelte";
     import CarInfo from "../../../lib/bookCarInfo.svelte";
     import PriceInfo from "../../../lib/bookPriceInfo.svelte";
-
+    import { pickupLocation } from "../../../stores/mapLocations";
 
     let carName = "BMW 330d xDrive Touring";
 
 
-    let selectedlocation = "Pick-up location";
+    let selectedlocation = $pickupLocation;
+
+
+
+
 
 
 </script>
 
 <div class="content">
 
-    <div class="name">
-        <h2>{carName}</h2>
-    </div>
+    <div class="outside">
+        <div class="name">
+            <h2>{carName}</h2>
+        </div>
 
-    <div class="inside">
+        <div class="inside">
 
-        <CarInfo></CarInfo>
+            <CarInfo></CarInfo>
 
-        <div class="bookInfo">
-            <div class="pickup">
-                <SearchBar bind:location={selectedlocation}></SearchBar>
+            <div class="bookInfo">
+                <div class="pickup">
+                    <SearchBar bind:location={selectedlocation}></SearchBar>
+                </div>
+                <div class="book">
+
+                    <GMap location={selectedlocation} ></GMap>
+
+                    <PriceInfo days=5> </PriceInfo>
+                </div>
+
             </div>
-            <div class="book">
-
-                <GMap location={selectedlocation} ></GMap>
-
-                <PriceInfo days=5> </PriceInfo>
-            </div>
-
         </div>
     </div>
+
 
 
 </div>
@@ -64,6 +71,7 @@
 }
 
 
+
 .inside {
     display: flex;
     flex-direction: row;
@@ -83,7 +91,7 @@ h2 {
 .bookInfo {
     display: flex;
     flex-direction: column;
-    margin: 0px 20px;
+    margin-left: 20px;
     width: 800px;
 }
 
@@ -115,7 +123,7 @@ h2 {
 
 .pickup :global(.dropdown) {
     width: 475px;
-    height: 200px;
+    height: 250px;
 }
 
 
@@ -128,8 +136,8 @@ h2 {
 }
 
 .pickup :global(.calendar) {
-    width: 300px;
-    height: 250px;
+    width: 260px;
+    height: 220px;
 }
 
 .pickup :global(.date) {

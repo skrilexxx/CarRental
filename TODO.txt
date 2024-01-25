@@ -1,5 +1,5 @@
 5. search bar - 95%
-6.9 calendar jde udelat pomoci inputu typu date, robis mi to ukazal 
+6.9 calendar jde udelat pomoci inputu typu date, robis mi to ukazal
 7. stahovani kalendare od nekud idk, potrebuju vedet kolik ma mesic dni a jakej den zacina, nacitani current date asi ze serveru
 8. dodělat vybíraní dne kalendáře
 11. fix calendar scaleble text na non scalable
@@ -8,5 +8,9 @@ Po tom co bude page hotova na 1920*1080 rozliseni cca nebo jakoze n pc, tak to m
 13. az bude kalendar tak udelat pocitani ceny podle vybranych dni
 14. na konec potom instrikce k vyzvdenuti, podminky, smlouvy, pro maturitni praci musi byt rezervace zdarma
 15. mozna oddelat z car listu ten title Car List
+16. mam udelanej store na google mapy a na selected location ale buttuny mi refreshusi stranku takze se to vzdy resetuje, nejde mi to vypnout ten refresh, asi to udelam jinak
+
+
+
 Na konec po zabookovani napsat ze byla poslana objednavka a ze bude poslan email jestli byla prijata ci ne, v be bude panel na objednvaky a na jejich prijmani a odmitani, udelat cookies
 do db pridat status objednavek, a tabulku na typ statusu, podana, prijata, hotova, ....

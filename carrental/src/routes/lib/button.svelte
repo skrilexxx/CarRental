@@ -9,7 +9,7 @@
 
 </script>
 
-<button type="button" on:click={search}>{label}</button>
+<button type="button" on:click|preventDefault={search}>{label}</button>
 
 
 <style>
@@ -22,7 +22,6 @@ button {
     background-color: #BC6FF1;
     border: none;
     border-radius: 10px;
-    max-width: 200px;
     height: 72px;
     width: 100%;
     font-weight:  bold;

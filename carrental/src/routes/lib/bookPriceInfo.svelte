@@ -1,11 +1,15 @@
 <script>
+    import { page } from "$app/stores";
     import Button from "./button.svelte";
-    
+
+    const carId = $page.params.carId;
+
     let price = "169";
     export let days = 5; //udelat aby to pocitalo podle tech dni co si vybere uzivatel - az bude kalendar
     let rentalPrice = parseInt(price) * days
     let insuracePrice = 60;
     let totalPrice = rentalPrice + insuracePrice;
+    let path = "/carDetails/" + carId + "/checkout";
 
 
 
@@ -61,7 +65,9 @@
             <p>Unlimited mileage</p>
         </div>
     </div>
-    <Button label="Book now"></Button>
+    <div class="pricebtn">
+        <Button label="Book now" path={path}></Button>
+    </div>
 </div>
 
 
@@ -92,9 +98,15 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin-left: 10px;
     width: 40%;
+    border-radius: 15px;
+}
+
+.pricebtn {
+    display: flex;
+    align-items: center;
+    width: 100%;
     border-radius: 15px;
 }
 
@@ -224,6 +236,9 @@ p {
 
 .priceInfo :global(button) {
     margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
     width: 100%;
     height: 50px;
     max-width: none;

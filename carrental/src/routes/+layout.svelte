@@ -54,6 +54,10 @@
     }
 
     footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       padding: 20px;
       text-align: center;
     }
