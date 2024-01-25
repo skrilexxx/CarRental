@@ -1,4 +1,5 @@
 5. search bar - 95%
+6.9 calendar jde udelat pomoci inputu typu date, robis mi to ukazal 
 7. stahovani kalendare od nekud idk, potrebuju vedet kolik ma mesic dni a jakej den zacina, nacitani current date asi ze serveru
 8. dodělat vybíraní dne kalendáře
 11. fix calendar scaleble text na non scalable
