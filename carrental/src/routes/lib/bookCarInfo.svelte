@@ -1,5 +1,4 @@
 <script>
-
     let model = "G21";
     let seats = "5";
     let fuel = "Diesel";

@@ -8,4 +8,5 @@ Po tom co bude page hotova na 1920*1080 rozliseni cca nebo jakoze n pc, tak to m
 13. az bude kalendar tak udelat pocitani ceny podle vybranych dni
 14. na konec potom instrikce k vyzvdenuti, podminky, smlouvy, pro maturitni praci musi byt rezervace zdarma
 15. mozna oddelat z car listu ten title Car List
-16. predelat book now pravou cast na komponent a trochu zredukovat css v book now
+Na konec po zabookovani napsat ze byla poslana objednavka a ze bude poslan email jestli byla prijata ci ne, v be bude panel na objednvaky a na jejich prijmani a odmitani, udelat cookies
+do db pridat status objednavek, a tabulku na typ statusu, podana, prijata, hotova, ....

@@ -1,5 +1,5 @@
 <script>
-
+    import Button from "./button.svelte";
     
     let price = "169";
     export let days = 5; //udelat aby to pocitalo podle tech dni co si vybere uzivatel - az bude kalendar
@@ -61,7 +61,7 @@
             <p>Unlimited mileage</p>
         </div>
     </div>
-
+    <Button label="Book now"></Button>
 </div>
 
 
@@ -222,5 +222,11 @@ p {
     border-style: solid;
 }
 
+.priceInfo :global(button) {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    max-width: none;
+}
 
 </style>

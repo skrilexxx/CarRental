@@ -115,6 +115,7 @@ h2 {
 
 .pickup :global(.dropdown) {
     width: 475px;
+    height: 200px;
 }
 
 
