@@ -160,7 +160,9 @@ h2 {
     justify-content: center;
 }
 
-
+.book :global(.pricebtn button) {
+    display: none;
+}
 
 
 </style>

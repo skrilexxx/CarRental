@@ -1,8 +1,55 @@
 <script>
     import FormInput from "./formInput.svelte";
     import Button from "./button.svelte";
+    import CountryDropdown from "./countryDropdown.svelte";
+
+    let orderData = {
+        email: "",
+        name: "",
+        surname: "",
+        driverLicenseNumber: "",
+        street: "",
+        houseNumber: "",
+        city: "",
+        zipCode: "",
+        country: "",
+    }
 
 
+    function sendOrder() {
+        if (document.getElementById("Email address").value == "" || document.getElementById("Name").value == "" || document.getElementById("Surname").value == "" || document.getElementById("Driver license number").value == "" || document.getElementById("Street").value == "" || document.getElementById("House number").value == "" || document.getElementById("City").value == "" || document.getElementById("Zip code").value == "" || document.getElementById("country").value == "" || document.getElementById("Phone number").value == "") {
+            alert("Please fill in all the fields.")
+            return;
+        }
+        if (!document.getElementById("Email address").value.includes("@")) {
+            alert("Please enter a valid email address.")
+            return;
+        }
+        if (document.getElementById("Zip code").value.length != 5) {
+            alert("Please enter a valid zip code.")
+            return;
+        }
+        if (document.getElementById("Driver license number").value.length  < 1 || document.getElementById("Driver license number").value.length  > 16) {
+            alert("Please enter a valid driver license number.")
+            return;
+        }
+        if (document.getElementById("Phone number").value.length  < 9 || document.getElementById("Phone number").value.length  > 15) {
+            alert("Please enter a valid phone number.")
+            return;
+        }
+
+        orderData.email = document.getElementById("Email address").value;
+        orderData.name = document.getElementById("Name").value;
+        orderData.surname = document.getElementById("Surname").value;
+        orderData.driverLicenseNumber = document.getElementById("Driver license number").value;
+        orderData.street = document.getElementById("Street").value;
+        orderData.houseNumber = document.getElementById("House number").value;
+        orderData.city = document.getElementById("City").value;
+        orderData.zipCode = document.getElementById("Zip code").value;
+        orderData.country = document.getElementById("country").value;
+
+        console.log(orderData)
+    }
 
 </script>
 
@@ -15,11 +62,12 @@
                 <p>As stated in the driver’s license.</p>
             </div>
             <div class="info">
-                <FormInput label="Email address"></FormInput>
                 <FormInput label="Name"></FormInput>
                 <FormInput label="Surname"></FormInput>
-                <!--phone number-->
-                <!--country-->
+                <FormInput label="Driver license number"></FormInput>
+                <FormInput label="Email address"></FormInput>
+                <FormInput label="Phone number"></FormInput>
+                <CountryDropdown label="Country of permanent residence" ></CountryDropdown>
             </div>
         </div>
     </div>
@@ -39,7 +87,7 @@
             </div>
         </div>
     </div>
-
+<!-- platba bude az po rezervaci auta pres platebni branu 3rd party
     <div class="payment box">
         <div class="inside">
             <div class="title">
@@ -55,7 +103,7 @@
             </div>
         </div>
     </div>
-
+-->
     <div class="conditons box">
         <div class="inside">
             <div class="title">
@@ -65,7 +113,8 @@
         </div>
     </div>
 
-    <Button label="Book and Pay"></Button>
+    <Button label="Book and Pay" action={sendOrder} ></Button>
+
 
 </div>
 
@@ -88,7 +137,7 @@
     border-radius: 10px;
     border-color: #626161;
     border-style: solid;
-    width: 100%;
+    width: 102%;
     border-width: 4px;
 }
 
@@ -102,10 +151,6 @@
     margin-bottom: 8px;
 }
 
-.payment {
-    display: flex;
-    margin-bottom: 8px;
-}
 
 .conditons {
     display: flex;
@@ -123,16 +168,6 @@
 
 .title {
     margin-top: 25px;
-}
-
-.cardcode {
-    display: flex;
-    flex-direction: row;
-}
-
-.cardcode :global(.inputField) {
-    width: 130px;
-    margin-right: 10px;
 }
 
 h2 {
@@ -160,4 +195,25 @@ p {
     height: 60px;
 }
 
+form {
+    width: 100%;
+}
+
+/*
+.payment {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+
+.cardcode {
+    display: flex;
+    flex-direction: row;
+}
+
+.cardcode :global(.inputField) {
+    width: 130px;
+    margin-right: 10px;
+}
+*/
 </style>

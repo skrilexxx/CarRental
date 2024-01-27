@@ -2,6 +2,7 @@
 
     export let label;
     export let path;
+    export let action = search;
 
     function search () {
         window.location.href = path;
@@ -9,7 +10,7 @@
 
 </script>
 
-<button type="button" on:click|preventDefault={search}>{label}</button>
+<button type="button" on:click|preventDefault={action}>{label}</button>
 
 
 <style>

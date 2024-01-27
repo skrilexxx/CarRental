@@ -6,7 +6,7 @@
 
 <div class="content">
     <p>{label}</p>
-    <input type="text" class="inputField">
+    <input type="text" class="inputField" id={label}>
 </div>
 
 
@@ -33,6 +33,7 @@ input {
     border-radius: 5px;
     height: 30px;
     width: 280px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 </style>
