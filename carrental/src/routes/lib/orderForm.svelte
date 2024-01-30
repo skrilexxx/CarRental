@@ -191,12 +191,8 @@ p {
 }
 
 .content :global(button) {
-    width: 100%;
+    width: 103%;
     height: 60px;
-}
-
-form {
-    width: 100%;
 }
 
 /*

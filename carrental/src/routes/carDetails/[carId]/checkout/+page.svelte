@@ -131,11 +131,6 @@ h2 {
     display: none;
 }
 
-.pickup :global(.calendar) {
-    width: 260px;
-    height: 220px;
-}
-
 .pickup :global(.date) {
     font-size: 18px;
 }
@@ -162,6 +157,16 @@ h2 {
 
 .book :global(.pricebtn button) {
     display: none;
+}
+
+.pickup :global(::-webkit-calendar-picker-indicator) {
+    width: 25px;
+    height: 25px;
+    padding-right: 10px;
+}
+
+.pickup :global(.input-calendar) {
+    font-size: 16px;
 }
 
 

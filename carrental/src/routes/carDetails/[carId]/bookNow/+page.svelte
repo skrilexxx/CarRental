@@ -127,23 +127,6 @@ h2 {
 }
 
 
-.pickup :global(.year) {
-    display: none;
-}
-
-.pickup :global(.line) {
-    display: none;
-}
-
-.pickup :global(.calendar) {
-    width: 260px;
-    height: 220px;
-}
-
-.pickup :global(.date) {
-    font-size: 18px;
-}
-
 .pickup :global(.icon) {
     width: 40px;
     height: 40px;
@@ -164,5 +147,14 @@ h2 {
     justify-content: center;
 }
 
+.pickup :global(::-webkit-calendar-picker-indicator) {
+    width: 25px;
+    height: 25px;
+    padding-right: 10px;
+}
+
+.pickup :global(.input-calendar) {
+    font-size: 16px;
+}
 
 </style>

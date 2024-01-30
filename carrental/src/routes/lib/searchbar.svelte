@@ -1,16 +1,18 @@
 <script>
 	import Button from "./button.svelte";
-	import Calendar from "./calendar.svelte";
     import Pickupbar from "./pickupbar.svelte";
+    import Calendar from "./Calendar.svelte";
 
     export let location;
+
+
 </script>
 
 <div class="barBg">
     <div class="searchbar">
         <Pickupbar bind:location = {location}></Pickupbar>
-        <Calendar></Calendar>
-        <Calendar></Calendar>
+        <Calendar id="from"></Calendar>
+        <Calendar id="to"></Calendar>
         <Button label="Search" path="/carList"></Button>
     </div>
 

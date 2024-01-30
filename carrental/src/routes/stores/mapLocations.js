@@ -10,5 +10,6 @@ export const mapLocations = {
 
 
 export let pickupLocation = writable("Pick-up location");
-export let pickupdate = writable("Pick-up date");
 export let dropoffLocation = writable("Drop-off location");
+export let pickupdate = writable("Pick-up date");
+export let dropoffdate = writable("Drop-off date");
