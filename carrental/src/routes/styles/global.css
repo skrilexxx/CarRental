@@ -30,6 +30,8 @@ body {
     background-size: cover;
     background-position: top;
     background-color: #12110F;
+    background-attachment: fixed;
+    height: 100vh;
   }
 
   p {
