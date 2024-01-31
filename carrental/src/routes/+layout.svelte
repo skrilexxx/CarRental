@@ -1,6 +1,8 @@
 <script>
   import Title from "./lib/title.svelte";
   import "./styles/global.css";
+
+  let year = new Date().getFullYear();
 </script>
 
 
@@ -35,7 +37,7 @@
   </main>
 
   <footer>
-    <p>Copyright Brno Car Rental 2023</p>
+    <p>Copyright Brno Car Rental {year}</p>
     <a href="/TestTerms&Conditions.pdf">Terms & Conditions</a>
   </footer>
 
