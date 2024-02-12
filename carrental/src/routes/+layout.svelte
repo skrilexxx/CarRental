@@ -38,7 +38,7 @@
 
   <footer>
     <p>Copyright Brno Car Rental {year}</p>
-    <a href="/TestTerms&Conditions.pdf">Terms & Conditions</a>
+    <a href="/documents/TestTerms&Conditions.pdf">Terms & Conditions</a>
   </footer>
 
 
