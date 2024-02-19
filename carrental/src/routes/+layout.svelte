@@ -9,6 +9,7 @@
 
 
   <header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <nav>
       <div class="pageTitle">
@@ -70,9 +71,9 @@
     }
 
     .links {
+      display: none;
       margin:  auto;
       justify-content: space-between;
-
     }
 
     a {
@@ -109,6 +110,7 @@
       display: inline;
       width: 100%;
       max-width: 200px;
+      display: none;
     }
 
     .pageTitle {
@@ -116,4 +118,15 @@
       width: 100%;
       max-width: 200px;
     }
+
+    @media (min-width: 820px) {
+      .links {
+        display: flex;
+      }
+
+      .socials {
+        display: inline;
+      }
+    }
+
   </style>

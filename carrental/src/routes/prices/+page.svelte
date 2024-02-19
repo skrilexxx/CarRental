@@ -9,52 +9,63 @@
 </div>
 <div class="content">
     <div class="home">
-        <p>Prices page content</p>
+        <a class="instructions" href="\documents\RentInstructions.pdf">Rent Intructions</a>
     </div>
 </div>
 
 
 <style>
 
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 1760px;
-}
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 1760px;
+    }
 
-.contentTitle {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 1760px;
-}
+    .contentTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 1760px;
+    }
 
-.title {
-    display: flex;
-    max-width: 433px;
-    justify-content: left;
-    align-items: left;
-}
+    .title {
+        display: flex;
+        max-width: 433px;
+        justify-content: left;
+        align-items: left;
+    }
 
-.home p {
-    display: inline;
-    font-family: 'Montserrat', sans-serif;
-    max-width: 750px;
-    font-weight: medium;
-    text-align: center;
-}
+    .home p {
+        display: inline;
+        font-family: 'Montserrat', sans-serif;
+        max-width: 750px;
+        font-weight: medium;
+        text-align: center;
+    }
 
-.home {
-    max-width: 1300px;
-    width: 100%;
-    text-align: left;
-}
+    .home {
+        max-width: 1300px;
+        width: 100%;
+        text-align: left;
+    }
 
+    .instructions{
+        text-decoration: none;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        }
+
+    .instructions:hover {
+    text-decoration: underline;
+    color: #BC6FF1;
+    }
 </style>
