@@ -85,11 +85,6 @@
 
 
 @media (max-width: 820px) {
-    .mainTitle {
-        font-size: 2rem;
-        margin-top: 0px;
-    }
-
     .shortText {
         display: block;
         margin-bottom: 20px;

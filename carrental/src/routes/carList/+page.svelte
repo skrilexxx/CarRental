@@ -7,9 +7,15 @@
 
 <div class="contentTitle">
     <div class="title">
-        <h2>Car List</h2> <!--mozna oddelat -->
+        <h2 class="mainTitle">Car List</h2> <!--mozna oddelat -->
     </div>
 </div>
+
+<div class="filterButton">
+    <p>Filter</p>
+    <img src="/filterIcon.svg" alt="filterIcon">
+</div>
+
 <div class="content">
     <div class="home">
         <div class="filter">
@@ -77,11 +83,41 @@
 }
 
 .filter {
-    display: none;
+    display: flex;
 }
 
-@media (min-width: 820px) {
+.filterButton {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 3px solid #626161;
+    background-color: white;
+    width: 140px;
+    height: 36px;
+}
+
+.filterButton p {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px;
+    margin-left: 10px;
+}
+
+.filterButton img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+
+@media (max-width: 820px) {
     .filter {
+        display: none;
+    }
+
+    .filterButton {
         display: flex;
     }
 }
