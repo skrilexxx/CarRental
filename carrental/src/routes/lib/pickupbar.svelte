@@ -57,8 +57,9 @@
         </div>
 
     <div  class="checkboxes">
-        <Checkbox bind:checked={aged30_65} label="Driver aged 30-65?" name="aged30-65" id="aged30-65" value="aged30-65"></Checkbox>
-        <Checkbox bind:checked={youngDriver} label="Young driver (18-22)?" name="youngDriver" id="youngDriver" value="youngDriver"></Checkbox>
+        <Checkbox bind:checked={youngDriver} label="Young driver (18-22)" name="youngDriver" id="youngDriver" value="youngDriver"></Checkbox>
+        <Checkbox bind:checked={aged30_65} label="Aged driver (30-65)" name="aged30-65" id="aged30-65" value="aged30-65"></Checkbox>
+
     </div>
 
 </div>
@@ -149,6 +150,16 @@ p {
 @keyframes fade-in {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+@media (max-width: 820px) {
+    .content {
+        width: 90%;
+    }
+
+    .header {
+        height: 80px;
+    }
 }
 
 </style>

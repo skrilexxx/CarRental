@@ -3,19 +3,54 @@
   import "./styles/global.css";
 
   let year = new Date().getFullYear();
+
+  function hamburger() {
+    const menu = document.getElementById('menu');
+
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+    } else {
+      menu.classList.add('hidden');
+    }
+
+
+  }
 </script>
 
 
-
+  <div class="menu hidden" id="menu">
+    <div class="inMenu">
+      <div class="top">
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <img src="/menuExit.svg" id="menuExit" on:click={hamburger} alt="exitButton">
+      </div>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <div class="pages" on:click={hamburger}>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/carList">Car List</a>
+        <a href="/prices">Prices</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <div class="bottom">
+        <a href="https://www.instagram.com/"><img src="/instagram.svg" alt="instagram"/></a>
+        <a href="https://www.linkedin.com/"><img src="/linkedin.svg" alt="twitter"/></a>
+        <a href="https://www.facebook.com/"><img src="/facebook.svg" alt="facebook"/></a>
+      </div>
+    </div>
+  </div>
 
   <header>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <nav>
       <div class="pageTitle">
-        <Title title="Brno Car Rental"/>
+        <a href="/" >
+          <Title title="Brno Car Rental"/>
+        </a>
       </div>
 
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
       <div class="links">
         <a href="/">Home</a>
         <a href="/about">About</a>
@@ -29,6 +64,13 @@
         <a href="https://www.linkedin.com/"><img src="/linkedin.svg" alt="twitter"/></a>
         <a href="https://www.facebook.com/"><img src="/facebook.svg" alt="facebook"/></a>
       </div>
+
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <div class="hamburger" id="burg" on:click={hamburger}>
+        <img src="/hamburger.svg" alt="hamburger"/>
+      </div>
+
+
     </nav>
 
   </header>
@@ -71,7 +113,7 @@
     }
 
     .links {
-      display: none;
+      display: flex;
       margin:  auto;
       justify-content: space-between;
     }
@@ -119,14 +161,88 @@
       max-width: 200px;
     }
 
-    @media (min-width: 820px) {
+    .hamburger {
+      display: none;
+      height: 30px;
+      width: 30px;
+    }
+
+    .menu {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #626161;
+      opacity: 0.9;
+      width: 100%;
+      height: 100%;
+      animation-name: fade-in;
+      animation-duration: 0.4s;
+    }
+
+    .inMenu {
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .top {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .top img {
+      height: 30px;
+      width: 30px;
+    }
+
+    .pages {
+      display: flex;
+      flex-direction: column;
+      margin: 15px;
+      align-items: left;
+    }
+
+    .pages a {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 0.9;}
+}
+
+    @media (max-width: 820px) {
       .links {
-        display: flex;
+        display: none;
       }
 
       .socials {
+        display: none;
+      }
+
+      .hamburger {
         display: inline;
       }
+
+      nav {
+        padding: 0px;
+        justify-content: space-between;
+      }
+
     }
 
   </style>

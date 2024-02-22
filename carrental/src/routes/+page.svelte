@@ -13,12 +13,16 @@
 
 
 <div class="content">
+    <div class="shortText">
+        <p>Ready to start your Brno journey?</p>
+    </div>
+
     <Searchbar/>
 
     <br><br><br><br><br>
     <div class="home">
         <p>Ready to start your Brno journey? Enter your details in the search bar above and let Brno Car Rentals be your trusted companion on the road.</p>
-        </div>
+    </div>
 </div>
 
 
@@ -68,5 +72,31 @@
     padding-left: 0.2vw;
 }
 
+.shortText p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.shortText {
+    display: none;
+}
+
+
+@media (max-width: 820px) {
+    .mainTitle {
+        font-size: 2rem;
+        margin-top: 0px;
+    }
+
+    .shortText {
+        display: block;
+    }
+
+    .home {
+        display: none;
+    }
+}
 
 </style>

@@ -42,4 +42,14 @@
     max-width: 200px;
 }
 
+@media (max-width: 820px) {
+    .searchbar {
+        flex-direction: column;
+    }
+
+    .barBg {
+        height: 200px;
+    }
+}
+
 </style>

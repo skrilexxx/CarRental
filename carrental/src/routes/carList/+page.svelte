@@ -12,7 +12,9 @@
 </div>
 <div class="content">
     <div class="home">
-        <FilterBar></FilterBar>
+        <div class="filter">
+            <FilterBar></FilterBar>
+        </div>
         <div class="cards">
             <CarCard></CarCard>
 
@@ -74,4 +76,13 @@
     margin-right: 30px;
 }
 
+.filter {
+    display: none;
+}
+
+@media (min-width: 820px) {
+    .filter {
+        display: flex;
+    }
+}
 </style>

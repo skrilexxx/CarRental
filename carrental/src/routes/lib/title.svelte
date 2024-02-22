@@ -20,5 +20,10 @@
         padding: 0;
     }
 
+    @media (max-width: 820px) {
+        h1 {
+            margin: 0;
+        }
+    }
 
 </style>
