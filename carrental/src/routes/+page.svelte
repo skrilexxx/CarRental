@@ -92,6 +92,7 @@
 
     .shortText {
         display: block;
+        margin-bottom: 20px;
     }
 
     .home {

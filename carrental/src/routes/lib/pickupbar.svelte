@@ -1,7 +1,6 @@
 <script>
 
     import Location from "./location.svelte";
-    import Checkbox from "./checkbox.svelte";
     import { pickupLocation } from "../stores/mapLocations";
     export let location = $pickupLocation;
 
@@ -11,8 +10,6 @@
 
     $: changeLocation(location);
 
-    let aged30_65 = false;
-    let youngDriver = false;
 
     function showDropdown() {
         const dropdown = document.getElementById('dropdown');
@@ -29,13 +26,6 @@
             document.addEventListener('click', handleDocumentClick);
         }
     }
-
-    function check(aged30_65, youngDriver) {
-        console.log({aged30_65}, {youngDriver});
-    }
-
-    $: check(aged30_65, youngDriver);
-
 
 </script>
 
@@ -56,11 +46,6 @@
             <Location bind:selecredLocation={location} label="Parkoviště Letiště Brno-Tuřany" address="Letiště Brno-Tuřany 904/1, 627 00 Brno - Tuřany"></Location>
         </div>
 
-    <div  class="checkboxes">
-        <Checkbox bind:checked={youngDriver} label="Young driver (18-22)" name="youngDriver" id="youngDriver" value="youngDriver"></Checkbox>
-        <Checkbox bind:checked={aged30_65} label="Aged driver (30-65)" name="aged30-65" id="aged30-65" value="aged30-65"></Checkbox>
-
-    </div>
 
 </div>
 
@@ -103,6 +88,7 @@
 
 
 .dropdown {
+    z-index: 1;
     position: absolute;
     background-color: white;
     width: 100%;
@@ -141,11 +127,6 @@ p {
     margin-top: 30px;
 }
 
-.checkboxes {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-}
 
 @keyframes fade-in {
     from {opacity: 0;}
@@ -154,11 +135,28 @@ p {
 
 @media (max-width: 820px) {
     .content {
-        width: 90%;
+        width: 97.5%;
     }
 
     .header {
-        height: 80px;
+        margin: 0;
+        margin-top: 1px;
+        height: 75px;
+
+    }
+
+    .dropdown {
+        height: 40vh;
+    }
+
+    .dropdown p {
+        margin-top: 18px;
+        margin-bottom: 10px;
+
+    }
+
+    .icon {
+        width: 10%;
     }
 }
 

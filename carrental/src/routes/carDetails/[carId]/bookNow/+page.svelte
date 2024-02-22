@@ -157,4 +157,13 @@ h2 {
     font-size: 16px;
 }
 
+.pickup :global(.input-calendar)::-webkit-calendar-picker-indicator:hover {
+    cursor: pointer;
+}
+
+.pickup :global(.calendar) {
+    width: 100%;
+    max-height: 80px;
+}
+
 </style>

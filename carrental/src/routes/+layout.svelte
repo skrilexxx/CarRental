@@ -152,7 +152,7 @@
       display: inline;
       width: 100%;
       max-width: 200px;
-      display: none;
+      display: inline;
     }
 
     .pageTitle {
@@ -165,6 +165,10 @@
       display: none;
       height: 30px;
       width: 30px;
+    }
+
+    .hamburger:hover {
+      cursor: pointer;
     }
 
     .menu {
@@ -197,6 +201,10 @@
     .top img {
       height: 30px;
       width: 30px;
+    }
+
+    #menuExit:hover {
+      cursor: pointer;
     }
 
     .pages {

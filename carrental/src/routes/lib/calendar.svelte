@@ -34,7 +34,7 @@
 
 .content {
     margin: 3px;
-    width:17%;
+    width:100%;
     height: 72px;
     position: relative;
 }
@@ -68,5 +68,15 @@
     display: none;
 }
 
+@media (max-width: 820px) {
+    .input-calendar {
+        font-size: 16px;
+    }
+
+    .input-calendar::-webkit-calendar-picker-indicator {
+        width: 20px;
+        height: 20px;
+    }
+}
 
 </style>

@@ -96,4 +96,10 @@ input[type="checkbox"]:checked + label svg .check {
     animation: dash 0.5s linear forwards;
 }
 
+@media (max-width: 820px) {
+    .content {
+        padding: 0;
+    }
+}
+
 </style>

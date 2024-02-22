@@ -59,4 +59,19 @@
     margin: 0;
 }
 
+@media (max-width: 820px) {
+    .content {
+        padding: 10px 0px;
+    }
+
+    .marker {
+        margin-left: 10px;
+        display: none;
+    }
+
+    .text {
+        margin-left: 18px;
+    }
+}
+
 </style>
