@@ -51,14 +51,19 @@
 
     // $: check(activeFilters, filters);
 
-
+    function closeFilter() {
+        let filterMenu = document.getElementById("filterMenu");
+        filterMenu.classList.toggle("hidden");
+    }
 </script>
 
 <div class="filterBar">
-    <div class="label">
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <div class="label" on:click={closeFilter}>
         <h3>Filter</h3>
-        <hr class="line">
+        <img src="/filterIcon.svg" alt="filterIcon">
     </div>
+    <hr class="line">
 
     <div class="price part">
         <p class="title">Price per day</p>
@@ -124,7 +129,6 @@
 
 .label {
     display: flex;
-    flex-direction: column;
     justify-content: left;
     align-items: center;
     width: 100%;
@@ -138,6 +142,14 @@ h3 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
+    margin-left: 10%;
+}
+
+.label img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10%;
+    margin-top: 10px;
 }
 
 .line {
@@ -173,6 +185,15 @@ p {
     font-weight: 600;
 }
 
+@media (max-width: 820px) {
+    .filterBar {
+        width: 100%;
+        max-width: 100%;
+    }
 
+    .label h3{
+        align-items: left;
+    }
+}
 
 </style>
