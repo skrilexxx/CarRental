@@ -20,12 +20,16 @@
 
 <div class="barBg">
     <div class="searchbar">
-        <Pickupbar bind:location = {location}></Pickupbar>
+        <div class="pickup">
+            <Pickupbar bind:location = {location}></Pickupbar>
+        </div>
         <div class="calendar">
             <Calendar id="from"></Calendar>
             <Calendar id="to"></Calendar>
         </div>
-        <Button label="Search" path="/carList"></Button>
+        <div class="btn">
+            <Button label="Search" path="/carList"></Button>
+        </div>
     </div>
 </div>
 
@@ -66,8 +70,26 @@
     width: 30%;
 }
 
-.searchbar :global(button) {
-    max-width: 200px;
+.pickup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    max-width: 1760px;
+    height: 100%;
+    width: 55%;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    max-width: 1760px;
+    height: 100%;
+    width: 15%;
 }
 
 .checkboxes {
@@ -83,6 +105,10 @@
         height: auto;
     }
 
+    .pickup {
+        width: 100%;
+    }
+
     .barBg {
         height: auto;
     }
@@ -92,9 +118,8 @@
         flex-direction: column;
     }
 
-    .searchbar :global(button) {
-        max-width: 97.5%;
-        height: 75px;
+    .btn {
+        width: 100%;
     }
 
     .calendar {

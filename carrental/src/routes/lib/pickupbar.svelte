@@ -54,7 +54,7 @@
 <style>
 
 .content {
-    width: 55%;
+    width: 100%;
     height: 100%;
     margin: 3px;
     position: relative;

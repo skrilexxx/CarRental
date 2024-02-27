@@ -108,17 +108,17 @@ h2 {
     border-radius: 10px;
 }
 
-.pickup :global(.header) {
+.pickup :global(.pickup) {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 475px;
+    width: 60%;
 }
 
 
 
 .pickup :global(.dropdown) {
-    width: 475px;
+    width: 470px;
     height: 250px;
 }
 
@@ -140,7 +140,7 @@ h2 {
     height: 40px;
 }
 
-.pickup :global(button) {
+.pickup :global(.btn) {
     display: none;
 }
 
@@ -174,7 +174,7 @@ h2 {
 }
 
 .pickup :global(.calendar) {
-    width: 100%;
+    width: 40%;
     max-height: 80px;
 }
 
