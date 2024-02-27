@@ -65,6 +65,9 @@ h3 {
     font-size: 24px;
 }
 
+.hidden {
+    display: none;
+}
 
 @media (max-width: 820px) {
   .mainTitle {

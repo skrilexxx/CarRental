@@ -159,9 +159,9 @@ p {
 
 @media (max-width: 820px) {
     .carCard {
+        width: 90vw;
     }
 
 }
-
 
 </style>

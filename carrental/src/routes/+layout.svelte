@@ -251,6 +251,10 @@
         justify-content: space-between;
       }
 
+      main {
+        text-align: left;
+      }
+
     }
 
   </style>

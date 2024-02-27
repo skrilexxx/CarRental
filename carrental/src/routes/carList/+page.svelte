@@ -3,17 +3,27 @@
     import CarCard from "../lib/carCard.svelte";
     import FilterBar from "../lib/filterBar.svelte";
 
+    function showFilter() {
+        const filterMenu = document.getElementById('filterMenu');
+        filterMenu.classList.toggle('hidden');
+    }
+
 </script>
 
 <div class="contentTitle">
     <div class="title">
-        <h2 class="mainTitle">Car List</h2> <!--mozna oddelat -->
+        <h2 class="mainTitle">Car List</h2> 
     </div>
 </div>
 
-<div class="filterButton">
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="filterButton" id="filterButton" on:click={showFilter}>
     <p>Filter</p>
     <img src="/filterIcon.svg" alt="filterIcon">
+</div>
+
+<div class="filterMenu hidden" id="filterMenu">
+    <FilterBar></FilterBar>
 </div>
 
 <div class="content">
@@ -99,7 +109,7 @@
 
 .filterButton p {
     color: black;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 18px;
     margin: 0px;
     margin-left: 10px;
@@ -111,6 +121,18 @@
     margin-right: 10px;
 }
 
+.filterMenu {
+    position: absolute;
+    top: 183px;
+    width: 250px;
+    animation-name: fade-in;
+    animation-duration: 0.4s;
+}
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+    }
 
 @media (max-width: 820px) {
     .filter {

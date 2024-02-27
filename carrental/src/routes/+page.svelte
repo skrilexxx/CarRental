@@ -81,6 +81,7 @@
 
 .shortText {
     display: none;
+    text-align: center;
 }
 
 
