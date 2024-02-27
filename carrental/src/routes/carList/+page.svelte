@@ -1,18 +1,29 @@
 <script>
-
+    import { browser } from '$app/environment';
     import CarCard from "../lib/carCard.svelte";
+    import CarCardPhone from "../lib/carCardPhone.svelte";
     import FilterBar from "../lib/filterBar.svelte";
+
+    let screenWith;
+    let screenType = "desktop";
+
 
     function showFilter() {
         const filterMenu = document.getElementById('filterMenu');
-        filterMenu.classList.toggle('hidden');
+        if (window.innerWidth < 820) {
+            filterMenu.classList.toggle("hidden");
+        }
     }
+
+
 
 </script>
 
+<svelte:window bind:innerWidth={screenWith}></svelte:window>
+
 <div class="contentTitle">
     <div class="title">
-        <h2 class="mainTitle">Car List</h2> 
+        <h2 class="mainTitle">Car List</h2>
     </div>
 </div>
 
@@ -32,8 +43,11 @@
             <FilterBar></FilterBar>
         </div>
         <div class="cards">
-            <CarCard></CarCard>
-
+            {#if screenWith < 820}
+                <CarCardPhone></CarCardPhone>
+            {:else}
+                <CarCard></CarCard>
+            {/if}
         </div>
 
 
@@ -141,6 +155,10 @@
 
     .filterButton {
         display: flex;
+    }
+
+    .cards {
+        min-width: 0;
     }
 }
 </style>

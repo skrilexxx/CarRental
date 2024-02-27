@@ -53,7 +53,9 @@
 
     function closeFilter() {
         let filterMenu = document.getElementById("filterMenu");
-        filterMenu.classList.toggle("hidden");
+        if (window.innerWidth < 820) {
+            filterMenu.classList.toggle("hidden");
+        }
     }
 </script>
 
@@ -146,6 +148,7 @@ h3 {
 }
 
 .label img {
+    display: none;
     width: 20px;
     height: 20px;
     margin-right: 10%;
@@ -194,6 +197,7 @@ p {
     .label h3{
         align-items: left;
     }
+
 }
 
 </style>
