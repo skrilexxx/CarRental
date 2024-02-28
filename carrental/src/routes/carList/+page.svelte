@@ -1,15 +1,13 @@
 <script>
-    import { browser } from '$app/environment';
     import CarCard from "../lib/carCard.svelte";
     import CarCardPhone from "../lib/carCardPhone.svelte";
     import FilterBar from "../lib/filterBar.svelte";
 
     let screenWith;
-    let screenType = "desktop";
 
 
     function showFilter() {
-        const filterMenu = document.getElementById('filterMenu');
+        const filterMenu = document.getElementById('filter');
         if (window.innerWidth < 820) {
             filterMenu.classList.toggle("hidden");
         }
@@ -33,13 +31,9 @@
     <img src="/filterIcon.svg" alt="filterIcon">
 </div>
 
-<div class="filterMenu hidden" id="filterMenu">
-    <FilterBar></FilterBar>
-</div>
-
 <div class="content">
     <div class="home">
-        <div class="filter">
+        <div class="filter hidden" id="filter">
             <FilterBar></FilterBar>
         </div>
         <div class="cards">
@@ -135,14 +129,6 @@
     margin-right: 10px;
 }
 
-.filterMenu {
-    position: absolute;
-    top: 183px;
-    width: 250px;
-    animation-name: fade-in;
-    animation-duration: 0.4s;
-}
-
 @keyframes fade-in {
     from {opacity: 0;}
     to {opacity: 1;}
@@ -150,7 +136,12 @@
 
 @media (max-width: 820px) {
     .filter {
-        display: none;
+        position: absolute;
+        top: 183px;
+        left: 0;
+        width: 250px;
+        animation-name: fade-in;
+        animation-duration: 0.4s;
     }
 
     .filterButton {

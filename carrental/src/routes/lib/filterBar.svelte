@@ -49,7 +49,7 @@
         console.log(filters);
     }
 
-    // $: check(activeFilters, filters);
+    $: check(activeFilters, filters);
 
     function closeFilter() {
         let filterMenu = document.getElementById("filterMenu");
