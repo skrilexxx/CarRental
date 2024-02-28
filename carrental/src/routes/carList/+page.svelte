@@ -2,16 +2,31 @@
     import CarCard from "../lib/carCard.svelte";
     import CarCardPhone from "../lib/carCardPhone.svelte";
     import FilterBar from "../lib/filterBar.svelte";
-
+    import { browser } from '$app/environment';
     let screenWith;
-
 
     function showFilter() {
         const filterMenu = document.getElementById('filter');
         if (window.innerWidth < 820) {
-            filterMenu.classList.toggle("hidden");
+            filterMenu.style.display = "flex";
         }
     }
+
+    function transition(screenWith) {
+        if (browser) {
+            const filterMenu = document.getElementById('filter');
+            if (screenWith > 820) {
+                filterMenu.style.display = "flex";
+            }
+            if (screenWith < 820 && filterMenu.style.display == "flex") {
+                filterMenu.style.display = "none";
+            }
+        }
+    }
+
+    $: transition(screenWith);
+
+
 
 
 
@@ -33,7 +48,7 @@
 
 <div class="content">
     <div class="home">
-        <div class="filter hidden" id="filter">
+        <div class="filter" id="filter">
             <FilterBar></FilterBar>
         </div>
         <div class="cards">
@@ -136,9 +151,10 @@
 
 @media (max-width: 820px) {
     .filter {
+        display: none;
         position: absolute;
         top: 183px;
-        left: 0;
+        left: 20px;
         width: 250px;
         animation-name: fade-in;
         animation-duration: 0.4s;

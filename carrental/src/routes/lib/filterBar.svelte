@@ -1,6 +1,7 @@
 <script>
 
     import Checkbox from "./checkboxBlack.svelte";
+    import { onMount } from 'svelte';
 
 
     let filters = {"price1":false, "price2":false, "price3":false, "price4":false, "price5":false, "type1":false, "type2":false, "type3":false, "type4":false, "type5":false, "type6":false, "type7":false, "type8":false, "type9":false, "fuel1":false, "fuel2":false, "fuel3":false, "fuel4":false};
@@ -49,12 +50,12 @@
         console.log(filters);
     }
 
-    $: check(activeFilters, filters);
+    // $: check(activeFilters, filters);
 
     function closeFilter() {
-        let filterMenu = document.getElementById("filterMenu");
-        if (window.innerWidth < 820) {
-            filterMenu.classList.toggle("hidden");
+            let filterMenu = document.getElementById("filter");
+            if (window.innerWidth < 820) {
+            filterMenu.style.display = "none";
         }
     }
 </script>
@@ -196,6 +197,10 @@ p {
 
     .label h3{
         align-items: left;
+    }
+
+    .label img {
+        display: flex;
     }
 
 }
