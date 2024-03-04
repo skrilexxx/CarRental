@@ -34,6 +34,48 @@
 
     <div class="pictures">
         <h2>{carName}</h2>
+
+        <div class="slider">
+            <div class="slides">
+
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <input type="radio" name="radio-btn" id="radio6">
+                <input type="radio" name="radio-btn" id="radio7">
+
+                <div class="slide first">
+                    <img src="/testCar/testCar.png" alt="testCar">
+                </div>
+                <div class="slide">
+                    <img src="/testCar/testCar3.png" alt="testCar3">
+                </div>
+                <div class="slide">
+                    <img src="/testCar/testCar4.png" alt="testCar4">
+                </div>
+                <div class="slide">
+                    <img src="/testCar/testCar5.png" alt="testCar5">
+                </div>
+                <div class="slide">
+                    <img src="/testCar/testCar6.png" alt="testCar6">
+                </div>
+                <div class="slide">
+                    <img src="/testCar/testCar7.png" alt="testCar7">
+                </div>
+
+            </div>
+
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+                <label for="radio6" class="manual-btn"></label>
+                <label for="radio7" class="manual-btn"></label>
+            </div>
+        </div>
+
         <div class="mainPicture">
             <img class="carPic" src={shownPicture} alt="testCar">
         </div>
@@ -297,6 +339,84 @@ h2 {
     width: 100%;
 }
 
+.slider {
+    width: 90vw;
+    display: none;
+}
+
+.slides {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slides input {
+    display: none;
+}
+
+.slides img{
+    width: 90vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide{
+    width: 100%;
+    transition: 2s;
+
+}
+
+.navigation-manual{
+    position: absolute;
+    width: 90vw;
+    margin-top: 220px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 10px;
+}
+
+.manual-btn:hover{
+    background: #BC6FF1;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -100%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -200%;
+}
+
+#radio5:checked ~ .first{
+    margin-left: -300%;
+}
+
+#radio6:checked ~ .first{
+    margin-left: -400%;
+}
+
+#radio7:checked ~ .first{
+    margin-left: -500%;
+}
+
+
 .button :global(button) {
     width: 100%;
     max-width: 500px;
@@ -318,18 +438,19 @@ h2 {
         align-items: center;
     }
 
+    .slider {
+        display: flex;
+    }
+
     h2 {
         font-size: 22px;
         margin-bottom: 15px;
     }
 
     .mainPicture {
-        max-width: 700px;
-        max-height: 420px;
-        width: 90vw;
-        height: 100%;
-        border-radius: 15px;
+        display: none;
     }
+
 
     .otherPictures {
         display: none;
