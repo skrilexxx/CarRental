@@ -312,5 +312,71 @@ h2 {
     cursor: pointer;
 }
 
+@media (max-width: 820px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .mainPicture {
+        max-width: 700px;
+        max-height: 420px;
+        width: 90vw;
+        height: 100%;
+        border-radius: 15px;
+    }
+
+    .otherPictures {
+        display: none;
+    }
+
+    .invisible {
+        display: none;
+    }
+
+    .info {
+        margin-top: 32px;
+    }
+
+    .value {
+        margin-left: 30px;
+    }
+
+    .what {
+        margin-right: 30px;
+    }
+
+    .specs {
+        width: 90vw;
+    }
+
+    .specs p {
+        font-size: 15px;
+    }
+
+    .included {
+        width: 90vw;
+    }
+
+    .title p {
+        font-size: 20px;
+    }
+
+    .book p {
+        font-size: 20px;
+    }
+
+    .button :global(button) {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    }
+
 
 </style>

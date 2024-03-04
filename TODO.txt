@@ -11,7 +11,5 @@ Po tom co bude page hotova na 1920*1080 rozliseni cca nebo jakoze n pc, tak to m
 16. mam udelanej store na google mapy a na selected location ale buttuny mi refreshusi stranku takze se to vzdy resetuje, nejde mi to vypnout ten refresh, asi to udelam jinak
 
 
-Az budu delat cisteni kodu tak predelat to v Booknow a Checout ty styly do layoutu je to better idk proc jse mto neudeala hned
-
 Na konec po zabookovani napsat ze byla poslana objednavka a ze bude poslan email jestli byla prijata ci ne, v be bude panel na objednvaky a na jejich prijmani a odmitani, udelat cookies
 do db pridat status objednavek, a tabulku na typ statusu, podana, prijata, hotova, ....
