@@ -1,7 +1,7 @@
 <script>
 
     import { page } from "$app/stores";
-    import Button from "./../../lib/button.svelte";
+    import Button from "../../lib/button.svelte";
 
     const carId = $page.params.carId;
 
