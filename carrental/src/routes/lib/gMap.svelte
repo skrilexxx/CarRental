@@ -55,4 +55,11 @@
 }
 
 
+@media (max-width: 820px) {
+    .map {
+        width: 90vw;
+        height: 50vw;
+    }
+}
+
 </style>

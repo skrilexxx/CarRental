@@ -35,8 +35,8 @@
     <div class="pictures">
         <h2>{carName}</h2>
 
-        <div class="slider">
-            <div class="slides">
+        <div class="slider" id="slider">
+            <div class="slides" id="slides">
 
                 <input type="radio" name="radio-btn" id="radio1">
                 <input type="radio" name="radio-btn" id="radio3">
@@ -371,7 +371,7 @@ h2 {
 .navigation-manual{
     position: absolute;
     width: 90vw;
-    margin-top: 220px;
+    margin-top: 58%;
     display: flex;
     justify-content: center;
 }
@@ -473,7 +473,7 @@ h2 {
     }
 
     .specs {
-        width: 90vw;
+        justify-content: space-between;
     }
 
     .specs p {

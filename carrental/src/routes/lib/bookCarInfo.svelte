@@ -130,4 +130,27 @@ p {
     font-size: 15px;
 }
 
+@media (max-width: 820px) {
+
+    .carInfo {
+        width: 90vw;
+    }
+
+    .picture {
+        width: 90vw;
+        max-width: 90vw;
+        max-height: 90vw;
+        margin-bottom: 10px;
+    }
+
+    .info {
+        display: none;
+    }
+
+    .title p {
+        font-size: 20px;
+    }
+
+}
+
 </style>

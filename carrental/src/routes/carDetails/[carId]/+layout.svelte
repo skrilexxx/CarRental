@@ -160,4 +160,41 @@ h2 {
 }
 
 
+@media (max-width: 820px) {
+    .inside {
+        width: 90vw;
+        flex-direction: column;
+    }
+
+    .book {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .bookInfo {
+        width: 90vw;
+        margin: 0px;
+    }
+
+    .pickup {
+        flex-direction: column;
+        max-height: 160px;
+        width: 90vw;
+    }
+
+    .name {
+        max-width: 90vw;
+        width: 90vw;
+    }
+
+    .pickup :global(.header) {
+    }
+
+    .pickup :global(.dropdown) {
+        width: 90vw;
+        height: 250px;
+    }
+
+}
+
 </style>

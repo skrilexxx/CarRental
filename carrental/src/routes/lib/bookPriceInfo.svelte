@@ -244,4 +244,41 @@ p {
     max-width: none;
 }
 
+@media (max-width: 820px) {
+    .priceInfo {
+        width: 90vw;
+        margin: 0px;
+    }
+
+    .price h2 {
+        font-size: 16px;
+    }
+
+    .price .itemPrice p{
+        font-size: 14px;
+    }
+
+    .price .item p{
+        font-size: 14px;
+    }
+
+    .greyLine {
+        width: 90%;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        border-color: #D9D9D9;
+        border-style: solid;
+    }
+
+    .priceInfo :global(button) {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+        height: 50px;
+        max-width: none;
+    }
+}
+
 </style>
