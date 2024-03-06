@@ -36,4 +36,9 @@ input {
     font-family: 'Montserrat', sans-serif;
 }
 
+@media (max-width: 820px) {
+
+}
+
+
 </style>

@@ -3,14 +3,21 @@
     import CarInfo from "../../lib/bookCarInfo.svelte";
     import PriceInfo from "../../lib/bookPriceInfo.svelte";
     import { pickupLocation } from "../../stores/mapLocations";
+    import { page } from "$app/stores";
+
+    let screenWith;
+    let pageName = $page.url.pathname.substr($page.url.pathname.lastIndexOf('/'));
 
     let carName = "BMW 330d xDrive Touring";
 
 
     let selectedlocation = $pickupLocation;
 
+    console.log(pageName);
 
 </script>
+
+<svelte:window bind:innerWidth={screenWith}></svelte:window>
 
 <div class="content">
 
@@ -30,8 +37,15 @@
                 <div class="book">
 
                     <slot />
+                    {#if pageName == "/bookNow"}
+                        <PriceInfo days=5> </PriceInfo>
+                    {/if}
 
-                    <PriceInfo days=5> </PriceInfo>
+
+                    {#if pageName == "/checkout" && screenWith > 820}
+                        <PriceInfo days=5> </PriceInfo>
+                    {/if}
+
                 </div>
 
             </div>
@@ -188,10 +202,24 @@ h2 {
     }
 
     .pickup :global(.header) {
+        width: 100%;
+    }
+
+    .pickup :global(.pickup) {
+        width: 90vw;
+    }
+
+    .pickup :global(.content) {
+        width: 100vw;
+        margin: 4px 4px;
+    }
+
+    .pickup :global(.calendar) {
+        width: 90vw;
     }
 
     .pickup :global(.dropdown) {
-        width: 90vw;
+        width: 88vw;
         height: 250px;
     }
 

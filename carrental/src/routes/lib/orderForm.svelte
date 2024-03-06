@@ -2,6 +2,7 @@
     import FormInput from "./formInput.svelte";
     import Button from "./button.svelte";
     import CountryDropdown from "./countryDropdown.svelte";
+    import PriceInfo from "./bookPriceInfo.svelte";
 
     let orderData = {
         email: "",
@@ -113,6 +114,10 @@
         </div>
     </div>
 
+    <div class="bookInfo">
+        <PriceInfo days=5> </PriceInfo>
+    </div>
+
     <Button label="Book and Pay" action={sendOrder} ></Button>
 
 
@@ -133,28 +138,18 @@
 }
 
 .box {
+    display: flex;
     background: white;
     border-radius: 10px;
     border-color: #626161;
     border-style: solid;
     width: 102%;
     border-width: 4px;
-}
-
-.driverInfo {
-    display: flex;
     margin-bottom: 8px;
 }
 
-.address {
-    display: flex;
-    margin-bottom: 8px;
-}
-
-
-.conditons {
-    display: flex;
-    margin-bottom: 8px;
+.bookInfo {
+    display: none;
 }
 
 .conditons .inside {
@@ -164,6 +159,7 @@
 .inside {
     margin-left: 20px;
     margin-bottom: 30px;
+    margin-right: 20px;
 }
 
 .title {
@@ -212,4 +208,55 @@ p {
     margin-right: 10px;
 }
 */
+
+
+@media (max-width: 820px) {
+    .content {
+        width: 90vw;
+        margin: 0px;
+        margin-top: 10px;
+    }
+
+    .box {
+        width: 97.5%;
+        justify-content: center;
+    }
+
+    .inside {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .title {
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .conditons p {
+        font-size: 10px;
+        margin-right: 0px;
+    }
+
+    .content :global(button) {
+        width: 90vw;
+        height: 60px;
+    }
+
+    .inside {
+        width: 90%;
+    }
+
+    .bookInfo {
+        display: flex;
+    }
+
+}
+
 </style>

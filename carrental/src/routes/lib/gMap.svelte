@@ -59,6 +59,7 @@
     .map {
         width: 90vw;
         height: 50vw;
+        margin-top: 15px;
     }
 }
 

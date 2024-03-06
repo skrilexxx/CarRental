@@ -271,13 +271,17 @@ p {
     }
 
     .priceInfo :global(button) {
-        margin-top: 20px;
+        margin-top: 10px;
         margin-bottom: 10px;
         margin-left: 0px;
         margin-right: 0px;
         width: 100%;
-        height: 50px;
+        height: 60px;
         max-width: none;
+    }
+
+    .included {
+        display: none;
     }
 }
 
