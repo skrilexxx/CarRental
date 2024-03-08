@@ -3,12 +3,9 @@
     import GMap from "../../../lib/gMap.svelte";
     import { pickupLocation } from "../../../stores/mapLocations";
 
-    let selectedlocation = $pickupLocation;
-
-
 </script>
 
-<GMap location={selectedlocation} ></GMap>
+<GMap location={$pickupLocation} ></GMap>
 
 
 <style>

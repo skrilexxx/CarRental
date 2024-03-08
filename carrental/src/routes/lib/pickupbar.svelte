@@ -2,13 +2,6 @@
 
     import Location from "./location.svelte";
     import { pickupLocation } from "../stores/mapLocations";
-    export let location = $pickupLocation;
-
-    function changeLocation(location) {
-        pickupLocation.set(location);
-    }
-
-    $: changeLocation(location);
 
 
     function showDropdown() {
@@ -35,15 +28,15 @@
         <div class="icon">
             <img src="/dropdownarrow.svg" alt="dropdownarrow" class="dropdownarrow"/>
         </div>
-        <p class="headerP">{location}</p>
+        <p class="headerP">{$pickupLocation}</p>
     </div>
 
         <div class="dropdown hidden" id="dropdown">
             <p>Choose pick-up location</p>
-            <Location bind:selecredLocation={location} label="NC Královo Pole" address="OC, Cimburkova 4, 612 00 Brno-Královo Pole"></Location>
-            <Location bind:selecredLocation={location} label="Parkoviště Hlavní nádraží" address="Benešova 52, 602 00 Brno-střed"></Location>
-            <Location bind:selecredLocation={location} label="Galerie Vaňkovka" address="Ve Vaňkovce 1, 602 00 Brno-střed"></Location>
-            <Location bind:selecredLocation={location} label="Parkoviště Letiště Brno-Tuřany" address="Letiště Brno-Tuřany 904/1, 627 00 Brno - Tuřany"></Location>
+            <Location bind:selecredLocation={$pickupLocation} label="NC Královo Pole" address="OC, Cimburkova 4, 612 00 Brno-Královo Pole"></Location>
+            <Location bind:selecredLocation={$pickupLocation} label="Parkoviště Hlavní nádraží" address="Benešova 52, 602 00 Brno-střed"></Location>
+            <Location bind:selecredLocation={$pickupLocation} label="Galerie Vaňkovka" address="Ve Vaňkovce 1, 602 00 Brno-střed"></Location>
+            <Location bind:selecredLocation={$pickupLocation} label="Parkoviště Letiště Brno-Tuřany" address="Letiště Brno-Tuřany 904/1, 627 00 Brno - Tuřany"></Location>
         </div>
 
 

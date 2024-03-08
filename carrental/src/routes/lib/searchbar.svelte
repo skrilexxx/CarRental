@@ -3,9 +3,10 @@
     import Pickupbar from "./pickupbar.svelte";
     import Calendar from "./Calendar.svelte";
     import Checkbox from "./checkbox.svelte";
+    import { pickupLocation } from "../stores/mapLocations";
+    import { pickupdate } from "../stores/mapLocations";
+    import { dropoffdate } from "../stores/mapLocations";
 
-
-    export let location;
 
     let aged30_65 = false;
     let youngDriver = false;
@@ -21,11 +22,11 @@
 <div class="barBg">
     <div class="searchbar">
         <div class="pickup">
-            <Pickupbar bind:location = {location}></Pickupbar>
+            <Pickupbar bind:location = {$pickupLocation}></Pickupbar>
         </div>
         <div class="calendar">
-            <Calendar id="from"></Calendar>
-            <Calendar id="to"></Calendar>
+            <Calendar idCal="from"></Calendar>
+            <Calendar idCal="to"></Calendar>
         </div>
         <div class="btn">
             <Button label="Search" path="/carList"></Button>

@@ -1,6 +1,6 @@
 <script>
 
-    export let id;
+    export let idCal;
 
     let today = new Date();
     let dd = today.getDate();
@@ -26,7 +26,7 @@
 
 
 <div class="content">
-    <input type="date" class="input-calendar" id={id} value={date} min={date} max={max}>
+    <input type="date" class="input-calendar" id={idCal} value={date} min={date} max={max}>
 </div>
 
 
