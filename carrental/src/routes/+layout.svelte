@@ -185,7 +185,8 @@
     }
 
     .inMenu {
-      margin: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -194,7 +195,7 @@
     .top {
       display: flex;
       justify-content: flex-end;
-      margin-top: 20px;
+      margin-top: 40px;
       margin-bottom: 20px;
     }
 
@@ -212,6 +213,7 @@
       flex-direction: column;
       margin: 15px;
       align-items: left;
+      margin-bottom: auto;
     }
 
     .pages a {

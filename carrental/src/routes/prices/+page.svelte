@@ -1,5 +1,9 @@
 <script>
 
+    import PriceCardCasual from "../lib/priceCardCasual.svelte";
+    import PriceCardEco from "../lib/priceCardEco.svelte";
+    import PriceCardLuxury from "../lib/priceCardLuxury.svelte";
+
 </script>
 
 <div class="contentTitle">
@@ -9,7 +13,12 @@
 </div>
 <div class="content">
     <div class="home">
-        <a class="instructions" href="\documents\RentInstructions.pdf">Rent Intructions</a>
+        <div class="prices">
+            <PriceCardEco></PriceCardEco>
+            <PriceCardCasual></PriceCardCasual>
+            <PriceCardLuxury></PriceCardLuxury>
+        </div>
+        <!--   <a class="instructions" href="\documents\RentInstructions.pdf">Rent Intructions</a> -->
     </div>
 </div>
 
@@ -43,14 +52,6 @@
         align-items: left;
     }
 
-    .home p {
-        display: inline;
-        font-family: 'Montserrat', sans-serif;
-        max-width: 750px;
-        font-weight: medium;
-        text-align: center;
-    }
-
     .home {
         max-width: 1300px;
         width: 100%;
@@ -65,7 +66,22 @@
         }
 
     .instructions:hover {
-    text-decoration: underline;
-    color: #BC6FF1;
+        text-decoration: underline;
+        color: #BC6FF1;
+    }
+
+    .prices {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    @media (max-width: 820px) {
+        .prices {
+            flex-direction: column;
+        }
     }
 </style>
