@@ -55,8 +55,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 18vw;
-    max-width: 300px;
+    width: 320px;
     min-width: 200px;
     height: 480px;
     background-color: white;
