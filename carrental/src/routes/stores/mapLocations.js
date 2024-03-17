@@ -8,8 +8,23 @@ export const mapLocations = {
     turany: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10438.826936133719!2d16.687310818605066!3d49.14919228731615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712ea94ab12a3bb%3A0xe3a6ad1f6749751!2zQnJub-KAk1R1xZlhbnkgQWlycG9ydA!5e0!3m2!1sen!2scz!4v1705946066415!5m2!1sen!2scz'
  };
 
+ let today = new Date();
+ let dd = today.getDate();
+ let mm = today.getMonth()+1;
+ let yyyy = today.getFullYear();
+ if(dd<10) {
+    dd = '0'+dd
+}
+
+if(mm<10) {
+    mm = '0'+mm
+}
+
+let date = yyyy + "-" + mm + "-" + dd;
+
+
 
 export let pickupLocation = writable("Pick-up location");
 export let dropoffLocation = writable("Drop-off location");
-export let pickupdate = writable("Pick-up date");
-export let dropoffdate = writable("Drop-off date");
+export let pickupdate = writable(date);
+export let dropoffdate = writable(date);

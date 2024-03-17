@@ -1,7 +1,8 @@
 <script>
     import { page } from "$app/stores";
     import Button from "./button.svelte";
-    import { browser } from '$app/environment';
+    import { pickupdate } from "../stores/mapLocations";
+    import { dropoffdate } from "../stores/mapLocations";
 
     const carId = $page.params.carId;
 
@@ -11,32 +12,24 @@
     let insuracePrice = 60;
     let totalPrice = rentalPrice + insuracePrice;
     let path = "/carDetails/" + carId + "/checkout";
-    let fromDay;
-    let toDay;
 
-    function countPrice() {
-        fromDay = document.getElementById("from").value;
-        toDay = document.getElementById("to").value;
-        days = (new Date(toDay) - new Date(fromDay)) / (1000 * 60 * 60 * 24);
+    function countPrice(pickupdate, dropoffdate) {
+        days = (new Date(dropoffdate) - new Date(pickupdate)) / (1000 * 60 * 60 * 24);
         if (days < 0) {
             days = 0;
+            console.log("You can't pick up the car and drop it off in the past");
         }
         if (days == 0) {
             days = 1;
         }
-        console.log(fromDay);
-        console.log(toDay);
-        console.log(days);
 
         rentalPrice = parseInt(price) * days;
         totalPrice = rentalPrice + insuracePrice;
 
     }
 
+    $: countPrice($pickupdate, $dropoffdate);
 
-    if (browser) {
-        countPrice();
-    }
 
 
 </script>

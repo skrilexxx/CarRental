@@ -1,12 +1,18 @@
 <script>
-
+    import { onMount } from 'svelte';
+    import { pickupdate } from "../stores/mapLocations";
+    import { dropoffdate } from "../stores/mapLocations";
     export let idCal;
+
 
 
     let today = new Date();
     let dd = today.getDate();
     let mm = today.getMonth()+1;
     let yyyy = today.getFullYear();
+    let mounted = false;
+
+
 
 
     if(dd<10) {
@@ -20,6 +26,23 @@
     let date = yyyy + "-" + mm + "-" + dd;
     let max = yyyy + 2 + "-" + mm + "-" + dd;
 
+
+
+    onMount(() => {
+        mounted = true;
+    });
+
+    $: if (mounted) {
+        let input = document.getElementById(idCal);
+        input.addEventListener('change', () => {
+            if (idCal == "from") {
+                pickupdate.set(input.value);
+            } else {
+                dropoffdate.set(input.value);
+            }
+
+        });
+    }
 
 
 
