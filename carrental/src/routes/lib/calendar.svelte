@@ -2,6 +2,7 @@
 
     export let idCal;
 
+
     let today = new Date();
     let dd = today.getDate();
     let mm = today.getMonth()+1;
@@ -26,7 +27,7 @@
 
 
 <div class="content">
-    <input type="date" class="input-calendar" id={idCal} value={date} min={date} max={max}>
+    <input type="date" class="input-calendar" id={idCal} value={date} min={date} max={max} >
 </div>
 
 

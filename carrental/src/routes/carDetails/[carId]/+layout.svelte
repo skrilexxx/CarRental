@@ -9,11 +9,20 @@
     let pageName = $page.url.pathname.substr($page.url.pathname.lastIndexOf('/'));
 
     let carName = "BMW 330d xDrive Touring";
+    let carId = $page.params.carId;
 
 
     let selectedlocation = $pickupLocation;
 
     console.log(pageName);
+
+
+
+
+
+
+
+
 
 </script>
 
@@ -38,12 +47,12 @@
 
                     <slot />
                     {#if pageName == "/bookNow"}
-                        <PriceInfo days=5> </PriceInfo>
+                        <PriceInfo> </PriceInfo>
                     {/if}
 
 
                     {#if pageName == "/checkout" && screenWith > 820}
-                        <PriceInfo days=5> </PriceInfo>
+                        <PriceInfo> </PriceInfo>
                     {/if}
 
                 </div>

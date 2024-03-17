@@ -1,16 +1,42 @@
 <script>
     import { page } from "$app/stores";
     import Button from "./button.svelte";
+    import { browser } from '$app/environment';
 
     const carId = $page.params.carId;
 
-    let price = "169";
-    export let days = 5; //udelat aby to pocitalo podle tech dni co si vybere uzivatel - az bude kalendar
+    let price = "169"; // to bude price z databaze
+    let days; //udelat aby to pocitalo podle tech dni co si vybere uzivatel - az bude kalendar
     let rentalPrice = parseInt(price) * days
     let insuracePrice = 60;
     let totalPrice = rentalPrice + insuracePrice;
     let path = "/carDetails/" + carId + "/checkout";
+    let fromDay;
+    let toDay;
 
+    function countPrice() {
+        fromDay = document.getElementById("from").value;
+        toDay = document.getElementById("to").value;
+        days = (new Date(toDay) - new Date(fromDay)) / (1000 * 60 * 60 * 24);
+        if (days < 0) {
+            days = 0;
+        }
+        if (days == 0) {
+            days = 1;
+        }
+        console.log(fromDay);
+        console.log(toDay);
+        console.log(days);
+
+        rentalPrice = parseInt(price) * days;
+        totalPrice = rentalPrice + insuracePrice;
+
+    }
+
+
+    if (browser) {
+        countPrice();
+    }
 
 
 </script>
