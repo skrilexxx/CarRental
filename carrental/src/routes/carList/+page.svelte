@@ -3,7 +3,10 @@
     import CarCardPhone from "../lib/carCardPhone.svelte";
     import FilterBar from "../lib/filterBar.svelte";
     import { browser } from '$app/environment';
+
     let screenWith;
+    export let data;
+    let cars = data.cars;
 
     function showFilter() {
         const filterMenu = document.getElementById('filter');
@@ -26,34 +29,7 @@
 
     $: transition(screenWith);
 
-    // Fetch data from the server
-
-    export async function load({ fetch }) {
-        const res = await fetch('/api/getCars', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-        const data = await res.json();
-
-        if (res.ok) {
-            return {
-                props: {
-                    data
-                }
-            };
-        }
-
-        return {
-            status: res.status,
-            error: new Error(data.message)
-        };
-
-    }
-
-    //let cars = load();
-
+    console.log("List of cars from DB", cars)
 </script>
 
 
@@ -77,11 +53,15 @@
             <FilterBar></FilterBar>
         </div>
         <div class="cards">
-            {#if screenWith < 820}
+            {#each cars as car}
+                {#if screenWith < 820}
                 <CarCardPhone></CarCardPhone>
-            {:else}
-                <CarCard></CarCard>
-            {/if}
+                {:else}
+                    <CarCard></CarCard>
+                {/if}
+            {/each}
+
+
         </div>
 
 

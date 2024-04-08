@@ -114,7 +114,7 @@
     align-items: center;
     width: 18vw;
     max-width: 300px;
-    height: auto;
+    height: 750px;
     background-color: white;
     border-radius: 15px;
     margin-bottom: 20px;
