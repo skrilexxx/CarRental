@@ -26,11 +26,36 @@
 
     $: transition(screenWith);
 
+    // Fetch data from the server
 
+    export async function load({ fetch }) {
+        const res = await fetch('/api/getCars', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const data = await res.json();
 
+        if (res.ok) {
+            return {
+                props: {
+                    data
+                }
+            };
+        }
 
+        return {
+            status: res.status,
+            error: new Error(data.message)
+        };
+
+    }
+
+    //let cars = load();
 
 </script>
+
 
 <svelte:window bind:innerWidth={screenWith}></svelte:window>
 
