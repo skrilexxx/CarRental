@@ -7,13 +7,13 @@
 
     let screenWith;
     let pageName = $page.url.pathname.substr($page.url.pathname.lastIndexOf('/'));
-
-    let carName = "BMW 330d xDrive Touring";
+    export let data;
+    let car = data.cars;
+    let carName = car.carName;
     let carId = $page.params.carId;
 
 
     let selectedlocation = $pickupLocation;
-
     console.log(pageName);
 
 
@@ -37,7 +37,7 @@
 
         <div class="inside">
 
-            <CarInfo></CarInfo>
+            <CarInfo bind:carInfo={car}></CarInfo>
 
             <div class="bookInfo">
                 <div class="pickup">
@@ -47,12 +47,12 @@
 
                     <slot />
                     {#if pageName == "/bookNow"}
-                        <PriceInfo> </PriceInfo>
+                        <PriceInfo bind:carInfo={car}> </PriceInfo>
                     {/if}
 
 
                     {#if pageName == "/checkout" && screenWith > 820}
-                        <PriceInfo> </PriceInfo>
+                        <PriceInfo bind:carInfo={car}> </PriceInfo>
                     {/if}
 
                 </div>

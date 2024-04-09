@@ -3,10 +3,13 @@
     import CarCardPhone from "../lib/carCardPhone.svelte";
     import FilterBar from "../lib/filterBar.svelte";
     import { browser } from '$app/environment';
+    import Button from "../lib/button.svelte";
 
     let screenWith;
     export let data;
     let cars = data.cars;
+    let load = 10;
+    let preloadedCars = cars.slice(0, load);
 
     function showFilter() {
         const filterMenu = document.getElementById('filter');
@@ -26,6 +29,19 @@
             }
         }
     }
+
+    function loadCars() {
+        load += 10;
+
+        if (load > cars.length) {
+            preloadedCars = cars;
+        }
+        else {
+            preloadedCars = cars.slice(0, load);
+            }
+
+    }
+
 
     $: transition(screenWith);
 
@@ -53,17 +69,24 @@
             <FilterBar></FilterBar>
         </div>
         <div class="cards">
-            {#each cars as car}
+            {#each preloadedCars as car}
                 {#if screenWith < 820}
-                <CarCardPhone></CarCardPhone>
+                <CarCardPhone bind:carId = {car.id} bind:carList= {cars}></CarCardPhone>
                 {:else}
-                    <CarCard></CarCard>
+                    <CarCard bind:carId = {car.id} bind:carList= {cars}></CarCard>
                 {/if}
             {/each}
 
+            {#if load <= cars.length}
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
+                <div class="moreBtn"  on:click={loadCars}>
+                    <Button label="Show More" path="" action="None"></Button>
+                </div>
+            {/if}
+
+
 
         </div>
-
 
 
     </div>
@@ -147,6 +170,12 @@
     width: 18px;
     height: 18px;
     margin-right: 10px;
+}
+
+.moreBtn :global(button) {
+    height: 50px;
+    width: 120px;
+    font-size: medium;
 }
 
 @keyframes fade-in {

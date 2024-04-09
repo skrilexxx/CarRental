@@ -1,9 +1,12 @@
 <script>
     import OrderForm from "../../../lib/orderForm.svelte";
 
+    export let data;
+
+
 </script>
 
-<OrderForm></OrderForm>
+<OrderForm bind:data={data}></OrderForm>
 
 
 <style>

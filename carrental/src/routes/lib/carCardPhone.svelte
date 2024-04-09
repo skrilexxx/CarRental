@@ -2,13 +2,15 @@
 
     import Button from "../lib/button.svelte";
 
-    let carId = "1";
+    export let carId;
+    export let carList;
+    let id = carId - 1;
     let path = "/carDetails/" + carId;
-    let carName = "BMW 330d xDrive Touring";
-    let seats = "5";
-    let fuel = "Diesel";
-    let transmission = "Manual";
-    let price = "169";
+    let carName = carList[id].carName;
+    let seats = carList[id].seats;
+    let fuel = carList[id].fuel;
+    let transmission = carList[id].transmission;
+    let price = carList[id].price;
     let buttontext = "Price " + price + "€ / Day";
 
 

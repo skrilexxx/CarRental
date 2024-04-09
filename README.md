@@ -19,7 +19,8 @@ use command: .\run.bat
 -  [svelteCalendar](https://snyk.io/advisor/npm-package/svelte-calendar)
 
 # json-server
-- cool tool ale neupzil jsem
-- npm install json-server
+cool tool ale nepoužil jsem
+
+npm install json-server
 
  - [tutorial](https://youtu.be/qHqQpHC0xVY?si=R3kW-FPhUoVcjdb7&t=254)

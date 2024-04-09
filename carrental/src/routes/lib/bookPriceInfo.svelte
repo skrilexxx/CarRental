@@ -6,8 +6,9 @@
 
     const carId = $page.params.carId;
 
-    let price = "169"; // to bude price z databaze
-    let days; //udelat aby to pocitalo podle tech dni co si vybere uzivatel - az bude kalendar
+    export let carInfo;
+    let price = carInfo.price;
+    let days;
     let rentalPrice = parseInt(price) * days
     let insuracePrice = 60;
     let totalPrice = rentalPrice + insuracePrice;

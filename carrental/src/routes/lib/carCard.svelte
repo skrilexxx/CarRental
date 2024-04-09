@@ -2,13 +2,16 @@
 
     import Button from "../lib/button.svelte";
 
-    let carId = "1";
+    export let carId;
+    let id = carId - 1;
+    export let carList;
     let path = "/carDetails/" + carId;
-    let carName = "BMW 330d xDrive Touring";
-    let seats = "5";
-    let fuel = "Diesel";
-    let transmission = "Manual";
-    let price = "169";
+    let carName = carList[id].carName;
+    let seats = carList[id].seats;
+    let fuel = carList[id].fuel;
+    let transmission = carList[id].transmission;
+    let price = carList[id].price;
+    let imgPathId = id;
     let buttontext = "Price " + price + "€ / Day";
 
 
@@ -91,6 +94,7 @@
 .info {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 67%;
     height: 80%;
     margin: 15px;

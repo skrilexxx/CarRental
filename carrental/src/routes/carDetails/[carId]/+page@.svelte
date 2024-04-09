@@ -5,20 +5,30 @@
 
     const carId = $page.params.carId;
 
-    let carName = "BMW 330d xDrive Touring";
-    let model = "G21";
-    let seats = "5";
-    let fuel = "Diesel";
-    let transmission = "Manual";
-    let engineDisplacement = "2 993 cm³";
-    let enginePower = "195 kW";
-    let year = "2019";
-    let consumption = "8.8";
-    let price = "169";
+    export let data;
+    let car = data.cars
+
+
+    console.log("Car details from DB", car);
+
+    let carName = car.carName;
+    let model = car.model;
+    let seats = car.seats;
+    let fuel = car.fuel;
+    let transmission = car.transmission;
+    let engineDisplacement = car.engineDisplacement + " cm³";
+    let enginePower = car.enginePower;
+    let year = car.year;
+    let consumption = car.consumption;
+    let price = car.price;
 
     let path = "/carDetails/" + carId + "/bookNow";
 
     let shownPicture = "/testCar/testCar.png";
+
+    //add pictures with carId to the database
+    let picturesId = car.carId;
+
 
     function changePicture(){
         shownPicture = event.target.src;

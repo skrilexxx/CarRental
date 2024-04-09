@@ -7,17 +7,21 @@ export const testCars = [
         fuel: 'Gasoline',
         transmission: 'Automatic',
         year: 2018,
-        price: 120
+        price: 120,
+        engineDisplacement: 1800,
+        enginePower: "139 hp",
+        consumption: "7.4"
     },
     {
         id: 2,
         carName: 'Toyota',
         model: 'Camry',
         seats: 5,
-        fuel: 'Gasoline',
-        transmission: 'Automatic',
+        fuel: 'Diesel',
+        transmission: 'Manual',
         year: 2019,
-        price: 150
+        price: 90
+
     },
     {
         id: 3,
@@ -27,7 +31,7 @@ export const testCars = [
         fuel: 'Gasoline',
         transmission: 'Automatic',
         year: 2020,
-        price: 180
+        price: 120
     },
     {
         id: 4,
@@ -67,7 +71,7 @@ export const testCars = [
         fuel: 'Gasoline',
         transmission: 'Automatic',
         year: 2018,
-        price: 120
+        price: 60
     },
     {
         id: 8,
@@ -84,7 +88,7 @@ export const testCars = [
         carName: 'Nissan',
         model: 'Rogue',
         seats: 5,
-        fuel: 'Gasoline',
+        fuel: 'Hybrid',
         transmission: 'Automatic',
         year: 2020,
         price: 180
@@ -107,16 +111,16 @@ export const testCars = [
         fuel: 'Gasoline',
         transmission: 'Automatic',
         year: 2019,
-        price: 150
+        price: 50
     },
     {
         id: 12,
         carName: 'Ford',
         model: 'Escape',
         seats: 5,
-        fuel: 'Gasoline',
+        fuel: 'Electric',
         transmission: 'Automatic',
         year: 2020,
-        price: 180
+        price: 75
     }
 ];

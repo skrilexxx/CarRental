@@ -4,6 +4,9 @@
     import CountryDropdown from "./countryDropdown.svelte";
     import PriceInfo from "./bookPriceInfo.svelte";
 
+    export let data;
+    let car = data.cars;
+
     let orderData = {
         email: "",
         name: "",
@@ -115,7 +118,7 @@
     </div>
 
     <div class="bookInfo">
-        <PriceInfo days=5> </PriceInfo>
+        <PriceInfo bind:carInfo={car}> </PriceInfo>
     </div>
 
     <Button label="Book and Pay" action={sendOrder} ></Button>

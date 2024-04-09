@@ -13,8 +13,10 @@ do db pridat status objednavek, a tabulku na typ statusu, podana, prijata, hotov
 
 Priorita do odevzdání :
 
-1. requesty na backend nachystat - pracuju na tom rn
+1. requesty na backend nachystat - ted jsou na rade uprava formulare a odesilani formulare jeste na backend a pak success a failed page
 1.5 fixnout car list page
+1.8 osetrit pocitani ceny kdyz je vyber dni zaporny
+1.9 udelat funkcni filter
 2. cookies - aby se ty selected věci propisovali
 3. dodelat kdyz si vyberes price skupinu at te to nekam hodi se selected filtrama
 

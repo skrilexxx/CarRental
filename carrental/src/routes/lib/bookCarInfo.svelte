@@ -1,12 +1,15 @@
 <script>
-    let model = "G21";
-    let seats = "5";
-    let fuel = "Diesel";
-    let transmission = "Manual";
-    let engineDisplacement = "2 993 cm³";
-    let enginePower = "195 kW";
-    let year = "2019";
-    let consumption = "8.8";
+
+    export let carInfo;
+
+    let model = carInfo.model;
+    let seats = carInfo.seats;
+    let fuel = carInfo.fuel;
+    let transmission = carInfo.transmission;
+    let engineDisplacement = carInfo.engineDisplacement + " cm³";
+    let enginePower = carInfo.enginePower;
+    let year = carInfo.year;
+    let consumption = carInfo.consumption;
 
     let picture = "/testCar/testCar.png";
 
@@ -81,16 +84,10 @@
 .specs {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin-bottom: 10px;
 }
 
-.what {
-    margin-right: 40px;
-}
-
-.value {
-    margin-left: 40px
-}
 
 .info {
     display: flex;
