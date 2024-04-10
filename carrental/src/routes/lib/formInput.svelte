@@ -28,6 +28,7 @@ p {
     text-align: left;
 }
 
+
 input {
     border: 1px solid black;
     border-radius: 5px;

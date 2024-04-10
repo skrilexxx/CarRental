@@ -1,15 +1,15 @@
 export const testCars = [
     {
         id: 1,
-        carName: 'Toyota',
-        model: 'Corolla',
+        carName: 'BMW M3',
+        model: 'M3 COMPETITION XDRIVE',
         seats: 5,
         fuel: 'Gasoline',
-        transmission: 'Automatic',
-        year: 2018,
-        price: 120,
-        engineDisplacement: 1800,
-        enginePower: "139 hp",
+        transmission: 'Manual',
+        year: 2022,
+        price: 230,
+        engineDisplacement: 3000,
+        enginePower: "395 kw (510 hp)",
         consumption: "7.4"
     },
     {
@@ -20,8 +20,10 @@ export const testCars = [
         fuel: 'Diesel',
         transmission: 'Manual',
         year: 2019,
-        price: 90
-
+        price: 90,
+        engineDisplacement: 2500,
+        enginePower: "202 hp",
+        consumption: "5.5"
     },
     {
         id: 3,
@@ -31,7 +33,10 @@ export const testCars = [
         fuel: 'Gasoline',
         transmission: 'Automatic',
         year: 2020,
-        price: 120
+        price: 120,
+        engineDisplacement: 2500,
+        enginePower: "203 hp",
+        consumption: "6.3"
     },
     {
         id: 4,
@@ -41,7 +46,10 @@ export const testCars = [
         fuel: 'Gasoline',
         transmission: 'Automatic',
         year: 2018,
-        price: 120
+        price: 120,
+        engineDisplacement: 1800,
+        enginePower: "158 hp",
+        consumption: "6.3"
     },
     {
         id: 5,
@@ -51,7 +59,10 @@ export const testCars = [
         fuel: 'Gasoline',
         transmission: 'Automatic',
         year: 2019,
-        price: 150
+        price: 150,
+        engineDisplacement: 1500,
+        enginePower: "192 hp",
+        consumption: "6.3"
     },
     {
         id: 6,
@@ -61,7 +72,10 @@ export const testCars = [
         fuel: 'Gasoline',
         transmission: 'Automatic',
         year: 2020,
-        price: 180
+        price: 180,
+        engineDisplacement: 2000,
+        enginePower: "190 hp",
+        consumption: "7.4"
     },
     {
         id: 7,
@@ -71,7 +85,10 @@ export const testCars = [
         fuel: 'Gasoline',
         transmission: 'Automatic',
         year: 2018,
-        price: 60
+        price: 60,
+        engineDisplacement: 1800,
+        enginePower: "124 hp",
+        consumption: "6.3"
     },
     {
         id: 8,
@@ -81,7 +98,10 @@ export const testCars = [
         fuel: 'Gasoline',
         transmission: 'Automatic',
         year: 2019,
-        price: 150
+        price: 150,
+        engineDisplacement: 2500,
+        enginePower: "182 hp",
+        consumption: "6.3"
     },
     {
         id: 9,
@@ -91,7 +111,10 @@ export const testCars = [
         fuel: 'Hybrid',
         transmission: 'Automatic',
         year: 2020,
-        price: 180
+        price: 180,
+        engineDisplacement: 2000,
+        enginePower: "141 hp",
+        consumption: "7.4"
     },
     {
         id: 10,
@@ -101,7 +124,10 @@ export const testCars = [
         fuel: 'Gasoline',
         transmission: 'Automatic',
         year: 2018,
-        price: 120
+        price: 120,
+        engineDisplacement: 1600,
+        enginePower: "120 hp",
+        consumption: "6.3"
     },
     {
         id: 11,
@@ -111,7 +137,10 @@ export const testCars = [
         fuel: 'Gasoline',
         transmission: 'Automatic',
         year: 2019,
-        price: 50
+        price: 50,
+        engineDisplacement: 2000,
+        enginePower: "160 hp",
+        consumption: "6.3"
     },
     {
         id: 12,
@@ -121,6 +150,9 @@ export const testCars = [
         fuel: 'Electric',
         transmission: 'Automatic',
         year: 2020,
-        price: 75
+        price: 75,
+        engineDisplacement: 2000,
+        enginePower: "165 hp",
+        consumption: "7.4"
     }
 ];

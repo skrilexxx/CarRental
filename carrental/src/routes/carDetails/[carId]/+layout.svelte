@@ -19,11 +19,6 @@
 
 
 
-
-
-
-
-
 </script>
 
 <svelte:window bind:innerWidth={screenWith}></svelte:window>

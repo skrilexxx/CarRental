@@ -11,7 +11,7 @@
     let days;
     let rentalPrice = parseInt(price) * days
     let insuracePrice = 60;
-    let totalPrice = rentalPrice + insuracePrice;
+    export let totalPrice = rentalPrice + insuracePrice;
     let path = "/carDetails/" + carId + "/checkout";
 
     function countPrice(pickupdate, dropoffdate) {

@@ -254,16 +254,10 @@
 .specs {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin-bottom: 30px;
 }
 
-.what {
-    margin-right: 60px;
-}
-
-.value {
-    margin-left: 60px
-}
 
 .price {
     display: flex;
