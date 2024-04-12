@@ -20,10 +20,9 @@
             days = 0;
             console.log("You can't pick up the car and drop it off in the past");
         }
-        if (days == 0) {
-            days = 1;
+        else if (days == 0) {
+            days = 0.5;
         }
-
         rentalPrice = parseInt(price) * days;
         totalPrice = rentalPrice + insuracePrice;
 

@@ -9,7 +9,7 @@
     let car = data.cars
 
 
-    console.log("Car details from DB", car);
+    //console.log("Car details from DB", car);
 
     let carName = car.carName;
     let model = car.model;

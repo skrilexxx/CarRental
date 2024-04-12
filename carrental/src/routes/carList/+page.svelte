@@ -4,6 +4,7 @@
     import FilterBar from "../lib/filterBar.svelte";
     import { browser } from '$app/environment';
     import Button from "../lib/button.svelte";
+    import { activeFilters } from "../stores/filters.js";
 
     let screenWith;
     export let data;
@@ -42,6 +43,12 @@
 
     }
 
+    // nefunguje, chtěl jsem tady zjiskat z backendu Id aut s selected filtrem, response je pending
+    async function check () {
+        const response = fetch('http://localhost:5173/api/filters');
+        console.log("check in carList: ", (await response).json());
+    }
+
 
     $: transition(screenWith);
 
@@ -65,7 +72,8 @@
 
 <div class="content">
     <div class="home">
-        <div class="filter" id="filter">
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <div class="filter" id="filter" on:click={check()}>
             <FilterBar></FilterBar>
         </div>
         <div class="cards">

@@ -1,41 +1,35 @@
 <script>
 
     import Checkbox from "./checkboxBlack.svelte";
+    import { activeFilters } from "../stores/filters.js";
 
-
-    let filters = {"price1":false, "price2":false, "price3":false, "price4":false, "price5":false, "type1":false, "type2":false, "type3":false, "type4":false, "type5":false, "type6":false, "type7":false, "type8":false, "type9":false, "fuel1":false, "fuel2":false, "fuel3":false, "fuel4":false};
-
-
-    let activeFilters = {
-        price: [],
-        type: [],
-        fuel: []
-    }
+    export let filters = {"price1":false, "price2":false, "price3":false, "price4":false, "price5":false, "type1":false, "type2":false, "type3":false, "type4":false, "type5":false, "type6":false, "type7":false, "type8":false, "type9":false, "fuel1":false, "fuel2":false, "fuel3":false, "fuel4":false};
+    let readFilters = $activeFilters;
 
     function addFilter(filters) {
         for (const [key, value] of Object.entries(filters)) {
 
             if (value == false) {
-                if (key.includes("price") && activeFilters.price.includes(key)) {
-                    activeFilters.price.splice(activeFilters.price.indexOf(key), 1);
+                if (key.includes("price") && $activeFilters.price.includes(key)) {
+                    $activeFilters.price.splice($activeFilters.price.indexOf(key), 1);
                 }
-                if (key.includes("type") && activeFilters.type.includes(key)) {
-                    activeFilters.type.splice(activeFilters.type.indexOf(key), 1);
+                if (key.includes("type") && $activeFilters.type.includes(key)) {
+                    $activeFilters.type.splice($activeFilters.type.indexOf(key), 1);
                 }
-                if (key.includes("fuel") && activeFilters.fuel.includes(key)) {
-                    activeFilters.fuel.splice(activeFilters.fuel.indexOf(key), 1);
+                if (key.includes("fuel") && $activeFilters.fuel.includes(key)) {
+                    $activeFilters.fuel.splice($activeFilters.fuel.indexOf(key), 1);
                 }
             }
 
             if (value == true) {
-                if (key.includes("price") && !activeFilters.price.includes(key)) {
-                    activeFilters.price.push(key);
+                if (key.includes("price") && !$activeFilters.price.includes(key)) {
+                    $activeFilters.price.push(key);
                 }
-                if (key.includes("type") && !activeFilters.type.includes(key)) {
-                    activeFilters.type.push(key);
+                if (key.includes("type") && !$activeFilters.type.includes(key)) {
+                    $activeFilters.type.push(key);
                 }
-                if (key.includes("fuel") && !activeFilters.fuel.includes(key)) {
-                    activeFilters.fuel.push(key);
+                if (key.includes("fuel") && !$activeFilters.fuel.includes(key)) {
+                    $activeFilters.fuel.push(key);
                 }
             }
 
@@ -45,11 +39,11 @@
     $: addFilter(filters)
 
     function check(activeFilters, filters) {
-        console.log(activeFilters);
-        console.log(filters);
+        console.log("store accessed in filterBar: ", activeFilters);
+       console.log(filters);
     }
 
-    // $: check(activeFilters, filters);
+    //$: check(readFilters, filters);
 
     function closeFilter() {
             let filterMenu = document.getElementById("filter");

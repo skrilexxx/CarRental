@@ -14,10 +14,8 @@ do db pridat status objednavek, a tabulku na typ statusu, podana, prijata, hotov
 Priorita do odevzdání :
 
 1. requesty na backend nachystat - success page
-1.8 osetrit pocitani ceny kdyz je vyber dni zaporny
-1.9 udelat funkcni filter
+1.9 udelat funkcni filter - pracuju na tom
 2. cookies - aby se ty selected věci propisovali
-2.5 dodelat pickup location a start a end day aby se posilal na backend v checkout page
 3. dodelat kdyz si vyberes price skupinu at te to nekam hodi se selected filtrama
 4. dodelat obrazky ke kazdymu autu
 

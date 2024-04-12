@@ -4,6 +4,7 @@
     import CountryDropdown from "./countryDropdown.svelte";
     import PriceInfo from "./bookPriceInfo.svelte";
     import { page } from "$app/stores";
+    import { pickupLocation, pickupdate, dropoffdate } from "../stores/mapLocations";
 
     export let data;
     let car = data.cars;
@@ -66,6 +67,9 @@
         orderData.country = document.getElementById("country").value;
         orderData.price = price;
         orderData.carId = car.id;
+        orderData.start = $pickupdate;
+        orderData.end = $dropoffdate;
+        orderData.pickupLocation = $pickupLocation;
 
         sendToServer();
         console.log(car.Id)

@@ -1,7 +1,13 @@
 <script>
 
+
+    export let data;
+    console.log(data);
+    let car = data.cars;
+
+
     let bookingId = "[Your Booking ID]";
-    let carName = "[Car Name]";
+    let carName = car;
     let startDate = "[Start Date]";
     let endDate = "[End Date]";
     let pickupLocation = "[Selected Pick-up Location]";
