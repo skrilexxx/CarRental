@@ -10,7 +10,7 @@
     </div>
 
     <div class="price">
-        <div class="dollar"><p>$</p></div>
+        <div class="dollar"><p>€</p></div>
         <div class="cost"><p>50 - 100</p></div>
         <div class="day"><p>/ Day</p></div>
     </div>

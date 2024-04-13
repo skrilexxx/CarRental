@@ -20,6 +20,11 @@
         }
     }
 
+    function hideDropdown() {
+        const dropdown = document.getElementById('dropdown');
+        dropdown.classList.add('hidden');
+    }
+
 </script>
 
 <div class="content">
@@ -31,7 +36,8 @@
         <p class="headerP">{$pickupLocation}</p>
     </div>
 
-        <div class="dropdown hidden" id="dropdown">
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <div class="dropdown hidden" id="dropdown" on:click={hideDropdown}>
             <p>Choose pick-up location</p>
             <Location bind:selecredLocation={$pickupLocation} label="NC Královo Pole" address="OC, Cimburkova 4, 612 00 Brno-Královo Pole"></Location>
             <Location bind:selecredLocation={$pickupLocation} label="Parkoviště Hlavní nádraží" address="Benešova 52, 602 00 Brno-střed"></Location>

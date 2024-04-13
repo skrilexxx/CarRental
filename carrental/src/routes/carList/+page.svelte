@@ -5,10 +5,12 @@
     import { browser } from '$app/environment';
     import Button from "../lib/button.svelte";
     import { activeFilters } from "../stores/filters.js";
+	import { empty, is_empty } from "svelte/internal";
 
     let screenWith;
     export let data;
     let cars = data.cars;
+    let filters = data.filters;
     let load = 10;
     let preloadedCars = cars.slice(0, load);
 
@@ -43,16 +45,46 @@
 
     }
 
-    // nefunguje, chtěl jsem tady zjiskat z backendu Id aut s selected filtrem, response je pending
-    async function check () {
-        const response = fetch('http://localhost:5173/api/filters');
-        console.log("check in carList: ", (await response).json());
-    }
+    function displayFilteredCars() {
+        let filteredCars = [];
+        let aFilters = $activeFilters;
 
+        console.log("aFilters: ", aFilters);
+        console.log("filters: ", filters);
+        for (let i = 0; i < cars.length; i++) {
+            if (i >= filters.length) {
+                break;
+            }
+            console.log("i: ", i);
+            if (cars[i].id == filters[i].carId) {
+                for (let obj in aFilters) {
+                    if (aFilters[obj] != 0) {
+                        console.log("obj: ", aFilters[obj]);
+                        for (let y = 0; y < aFilters[obj].length; y++) {
+                            if (aFilters[obj][y] == filters[i].priceF || aFilters[obj][y] == filters[i].typeF || aFilters[obj][y] == filters[i].fuelF) {
+                                if (!filteredCars.includes(cars[i])) {
+                                filteredCars.push(cars[i]);
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        if (is_empty(filteredCars)) {
+            filteredCars = cars;
+        }
+
+        console.log("filteredCars: ", filteredCars);
+        return filteredCars;
+    }
 
     $: transition(screenWith);
 
     console.log("List of cars from DB", cars)
+    console.log("List of filters from DB", filters)
 </script>
 
 
@@ -73,7 +105,7 @@
 <div class="content">
     <div class="home">
         <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <div class="filter" id="filter" on:click={check()}>
+        <div class="filter" id="filter" on:click={displayFilteredCars}>
             <FilterBar></FilterBar>
         </div>
         <div class="cards">

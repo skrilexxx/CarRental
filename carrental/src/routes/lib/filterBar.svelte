@@ -4,7 +4,6 @@
     import { activeFilters } from "../stores/filters.js";
 
     export let filters = {"price1":false, "price2":false, "price3":false, "price4":false, "price5":false, "type1":false, "type2":false, "type3":false, "type4":false, "type5":false, "type6":false, "type7":false, "type8":false, "type9":false, "fuel1":false, "fuel2":false, "fuel3":false, "fuel4":false};
-    let readFilters = $activeFilters;
 
     function addFilter(filters) {
         for (const [key, value] of Object.entries(filters)) {
