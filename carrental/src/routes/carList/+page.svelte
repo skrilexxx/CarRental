@@ -13,6 +13,7 @@
     let filters = data.filters;
     let load = 10;
     let preloadedCars = cars.slice(0, load);
+    let filtered = false;
 
     function showFilter() {
         const filterMenu = document.getElementById('filter');
@@ -49,8 +50,6 @@
         let filteredCars = [];
         let aFilters = $activeFilters;
 
-        console.log("aFilters: ", aFilters);
-        console.log("filters: ", filters);
         for (let i = 0; i < cars.length; i++) {
             if (i >= filters.length) {
                 break;
@@ -58,26 +57,31 @@
             console.log("i: ", i);
             if (cars[i].id == filters[i].carId) {
                 for (let obj in aFilters) {
-                    if (aFilters[obj] != 0) {
+                    if (aFilters[obj].length != 0) {
                         console.log("obj: ", aFilters[obj]);
                         for (let y = 0; y < aFilters[obj].length; y++) {
                             if (aFilters[obj][y] == filters[i].priceF || aFilters[obj][y] == filters[i].typeF || aFilters[obj][y] == filters[i].fuelF) {
                                 if (!filteredCars.includes(cars[i])) {
                                 filteredCars.push(cars[i]);
+                                filtered = true;
+                                console.log("pushed: ", cars[i])
                                 }
                             }
-
                         }
                     }
                 }
             }
         }
 
-        if (is_empty(filteredCars)) {
+        if (is_empty(filteredCars) && empty(aFilters.price) && empty(aFilters.type) && empty(aFilters.fuel)){
             filteredCars = cars;
+            filtered = false;
         }
 
+
         console.log("filteredCars: ", filteredCars);
+        preloadedCars = filteredCars.slice(0, load);
+        console.log("preloadedCars: ", preloadedCars);
         return filteredCars;
     }
 
@@ -109,15 +113,17 @@
             <FilterBar></FilterBar>
         </div>
         <div class="cards">
+            {#key preloadedCars}
             {#each preloadedCars as car}
                 {#if screenWith < 820}
-                <CarCardPhone bind:carId = {car.id} bind:carList= {cars}></CarCardPhone>
+                    <CarCardPhone bind:carId = {car.id} bind:carList= {cars}></CarCardPhone>
                 {:else}
                     <CarCard bind:carId = {car.id} bind:carList= {cars}></CarCard>
                 {/if}
             {/each}
+            {/key}
 
-            {#if load <= cars.length}
+            {#if load <= cars.length && !filtered && preloadedCars.length < cars.length}
                 <!-- svelte-ignore a11y-click-events-have-key-events -->
                 <div class="moreBtn"  on:click={loadCars}>
                     <Button label="Show More" path="" action="None"></Button>
