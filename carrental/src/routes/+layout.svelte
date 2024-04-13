@@ -96,6 +96,7 @@
     main {
       padding: 20px;
       text-align: center;
+      min-height: 700px;
     }
 
     footer {
@@ -255,6 +256,7 @@
 
       main {
         text-align: left;
+        min-height: auto;
       }
 
     }
