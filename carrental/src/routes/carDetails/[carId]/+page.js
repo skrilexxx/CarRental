@@ -2,7 +2,7 @@
 let apiUrlCars = 'http://localhost:5173/api/getCars/';
 
 if (import.meta.env.VITE_VERCEL_ENV === 'production') {
-    apiUrlCars = 'https://127.0.0.1/api/getCars/';
+    apiUrlCars = 'https://127.0.0.1/443/api/getCars/';
 }
 
 
