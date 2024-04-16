@@ -9,7 +9,7 @@ if (import.meta.env.VITE_VERCEL_ENV === 'production') {
 export const load = async (loadEvent) => {
     const {fetch} = loadEvent;
     const carId = loadEvent.params.carId;
-    const response = await fetch(`${apiUrlCars}${carId}`);
+    const response = await fetch(apiUrlCars + carId);
 
     if (response.ok) {
         return {
