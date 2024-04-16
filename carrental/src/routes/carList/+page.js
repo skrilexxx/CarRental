@@ -3,8 +3,8 @@ let apiUrlCars = 'http://localhost:5173/api/getCars';
 let apiUrlFilters = 'http://localhost:5173/api/getFilters';
 
 if (import.meta.env.VITE_VERCEL_ENV === 'production') {
-    apiUrlCars = 'https://76.76.21.21/api/getCars';
-    apiUrlFilters = 'https://76.76.21.21/api/getFilters';
+    apiUrlCars = 'https://www.brnocarrental.cz/api/getCars';
+    apiUrlFilters = 'https://www.brnocarrental.cz/api/getFilters';
 }
 
 

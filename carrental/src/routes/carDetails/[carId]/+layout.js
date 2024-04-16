@@ -2,7 +2,7 @@
 let apiUrlCars = 'http://localhost:5173/api/getCars/';
 
 if (import.meta.env.VITE_VERCEL_ENV === 'production') {
-    apiUrlCars = 'https://76.76.21.21/api/getCars/';
+    apiUrlCars = 'https://www.brnocarrental.cz/api/getCars/';
 }
 
 
