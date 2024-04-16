@@ -3,8 +3,8 @@
     import Button from "../lib/button.svelte";
 
     export let carId;
-    let id = carId - 1;
     export let carList;
+    let id = carId - 1;
     let path = "/carDetails/" + carId;
     let carName = carList[id].carName;
     let seats = carList[id].seats;

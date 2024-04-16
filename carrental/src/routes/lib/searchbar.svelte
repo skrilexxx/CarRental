@@ -1,11 +1,9 @@
 <script>
 	import Button from "./button.svelte";
     import Pickupbar from "./pickupbar.svelte";
-    import Calendar from "./Calendar.svelte";
+    import Calendar from "./calendar.svelte";
     import Checkbox from "./checkbox.svelte";
     import { pickupLocation } from "../stores/mapLocations";
-    import { pickupdate } from "../stores/mapLocations";
-    import { dropoffdate } from "../stores/mapLocations";
 
 
     let aged30_65 = false;

@@ -74,7 +74,7 @@
         }
 
         if (is_empty(filteredCars) && empty(aFilters.price) && empty(aFilters.type) && empty(aFilters.fuel)){
-            filteredCars = cars;
+            filteredCars = cars.slice(0, load);
             filtered = false;
         }
 

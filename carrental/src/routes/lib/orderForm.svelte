@@ -164,7 +164,7 @@
         <PriceInfo bind:carInfo={car} bind:totalPrice={price}> </PriceInfo>
     </div>
 
-    <Button label="Book and Pay" action={sendOrder} ></Button>
+    <Button label="Book Free" action={sendOrder} ></Button>
 
 
 </div>
