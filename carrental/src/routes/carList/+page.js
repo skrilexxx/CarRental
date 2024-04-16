@@ -3,8 +3,8 @@ let apiUrlCars = 'http://localhost:5173/api/getCars';
 let apiUrlFilters = 'http://localhost:5173/api/getFilters';
 
 if (import.meta.env.VITE_VERCEL_ENV === 'production') {
-    apiUrlCars = 'https://127.0.0.1/443/api/getCars';
-    apiUrlFilters = 'https://127.0.0.1/443/api/getFilters';
+    apiUrlCars = 'https://car-rental-git-main-skrilexxxs-projects.vercel.app/api/getCars';
+    apiUrlFilters = 'https://car-rental-git-main-skrilexxxs-projects.vercel.app/api/getFilters';
 }
 
 
