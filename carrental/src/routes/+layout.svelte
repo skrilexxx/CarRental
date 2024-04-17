@@ -81,7 +81,11 @@
 
   <footer>
     <p>Copyright Brno Car Rental {year}</p>
-    <a href="/documents/TestTerms&Conditions.pdf">Terms & Conditions</a>
+    <div class="docs">
+      <a href="/documents/RentInstructions.pdf">Rent Instructions</a>
+      <a href="/documents/TestTerms&Conditions.pdf">Terms & Conditions</a>
+      <a href="/documents/PrivacyPolicy.pdf">Privacy Policy</a>
+    </div>
   </footer>
 
 
@@ -148,6 +152,10 @@
       color: #BC6FF1;
     }
 
+    .docs {
+      display: flex;
+      justify-content: center;
+    }
 
     .socials {
       display: inline;

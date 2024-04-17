@@ -16,7 +16,7 @@ Priorita do odevzdání :
 1. requesty na backend nachystat - success page
 1.9 jeste malinko fixnout filter aby se filtry dali kombinovat lip
 2. cookies - aby se ty selected věci propisovali
-3. dodelat kdyz si vyberes price skupinu at te to nekam hodi se selected filtrama
+3. dodelat kdyz si vyberes price skupinu at te to nekam hodi se selected filtrama - provozne done
 4. dodelat obrazky ke kazdymu autu
 
 Bonus:  udělat backed

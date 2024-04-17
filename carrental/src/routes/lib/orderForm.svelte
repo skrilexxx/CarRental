@@ -23,11 +23,18 @@
         country: "",
         carId: "",
         price: "",
-        start: "", //TODO
-        end: "", //TODO
-        pickupLocation: "", //TODO
+        start: "",
+        end: "",
+        pickupLocation: "",
 
     }
+
+    let apiUrl = 'http://localhost:5173/api/order';
+
+    if (import.meta.env.VITE_VERCEL_ENV === 'production') {
+        apiUrl = 'https://www.brnocarrental.cz/api/order/';
+    }
+
 
     let driverMessage = "";
     let addressMessage = "";
@@ -78,7 +85,7 @@
     }
 
     function sendToServer() {
-        fetch('http://localhost:5173/api/order', {
+        fetch(apiUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -49,7 +49,7 @@
     </div>
 
     <div class="bottom">
-        <Button label="Select"></Button>
+        <Button label="Select" path="/carList"></Button>
     </div>
 
 </div>
