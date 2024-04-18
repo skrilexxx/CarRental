@@ -1,6 +1,8 @@
 <script>
   import Title from "./lib/title.svelte";
   import "./styles/global.css";
+  import Button from "./lib/button.svelte";
+  import { onMount } from "svelte";
 
   let year = new Date().getFullYear();
 
@@ -12,10 +14,30 @@
     } else {
       menu.classList.add('hidden');
     }
-
-
   }
+
+  function closeBanner() {
+    const banner = document.querySelector('.cookieBanner');
+    banner.style.display = 'none';
+    document.cookie = "cookieBanner=accepted; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+  }
+
+  onMount(() => {
+    let cookie = document.cookie;
+    if (cookie.includes(" cookieBanner=accepted") || cookie.includes("cookieBanner=accepted")) {
+      return;
+    }
+
+    const banner = document.querySelector('.cookieBanner');
+    banner.style.display = 'flex';
+  });
+
 </script>
+
+  <div class="cookieBanner">
+    <p>This website uses cookies to ensure you get the best experience on our website.</p>
+    <Button label={"Got it!"} action={closeBanner} />
+  </div>
 
 
   <div class="menu hidden" id="menu">
@@ -50,7 +72,6 @@
         </a>
       </div>
 
-      <!-- svelte-ignore a11y-click-events-have-key-events -->
       <div class="links">
         <a href="/">Home</a>
         <a href="/about">About</a>
@@ -187,7 +208,7 @@
 
     .menu {
       z-index: 1;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       background-color: #626161;
@@ -244,6 +265,25 @@
       display: none;
     }
 
+    .cookieBanner {
+      position: fixed;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      bottom: 0px;
+      display: none;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #626161;
+      opacity: 0.9;
+      height: 100px;
+      width: 100%;
+    }
+
+    .cookieBanner :global(button) {
+      width: 200px;
+      height: 60px;
+    }
+
     @keyframes fade-in {
     from {opacity: 0;}
     to {opacity: 0.9;}
@@ -270,6 +310,24 @@
       main {
         text-align: left;
         min-height: auto;
+      }
+
+      .cookieBanner {
+        width: 100%;
+        height: 80px;
+        justify-content: space-around;
+      }
+
+      .cookieBanner p {
+        font-size: 16px;
+        color: white;
+        margin: 5px;
+      }
+
+      .cookieBanner :global(button) {
+        width: 200px;
+        height: 60px;
+        margin: 5px;
       }
 
     }

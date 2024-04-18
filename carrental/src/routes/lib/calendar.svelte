@@ -30,8 +30,8 @@
 
 
     onMount(() => {
-        mounted = true;
         readCookiesStore();
+        mounted = true;
     });
 
     $: if (mounted) {
@@ -42,16 +42,15 @@
             } else {
                 dropoffdate.set(input.value);
             }
-
         });
     }
 
     function readCookiesStore() {
         let input = document.getElementById(idCal);
         if (idCal == "from") {
-            pickupdate.set(input.value);
+            input.value = $pickupdate;
         } else {
-            dropoffdate.set(input.value);
+            input.value = $dropoffdate;
         }
     }
 

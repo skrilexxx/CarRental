@@ -9,6 +9,8 @@
 
     let aged30_65 = false;
     let youngDriver = false;
+    let expDate = new Date();
+    expDate.setDate(expDate.getDate() + 1);
 
 
     function check(aged30_65, youngDriver) {
@@ -19,17 +21,16 @@
 
 
     function setPickupLocation() {
-        document.cookie= "pickupLocation=" + $pickupLocation + ";";
-
+        document.cookie= "pickupLocation=" + $pickupLocation ;
     }
-    
+
 
     function setPickupDate() {
-        document.cookie= "pickupdate=" + $pickupdate + ";";
+        document.cookie= "pickupdate=" + $pickupdate  ;
     }
 
     function setDropoffDate() {
-        document.cookie= "dropoffdate=" + $dropoffdate + ";";
+        document.cookie= "dropoffdate=" + $dropoffdate ;
     }
 
     function addCokies() {
@@ -40,8 +41,12 @@
     }
 
     function readCookies() {
-        let cookies = document.cookie.split(";");
-        console.log(cookies);
+        if (document.cookie == "") {
+            return;
+        }
+
+
+        let cookies = document.cookie.split("; ");
 
         for (let i = 0; i < cookies.length; i++) {
             let cookie = cookies[i].split("=");
@@ -49,10 +54,10 @@
             if (cookie[0] == "pickupLocation") {
                 $pickupLocation = cookie[1];
             }
-            if (cookie[0] == " pickupdate") {
+            if (cookie[0] == "pickupdate") {
                 $pickupdate = cookie[1];
             }
-            if (cookie[0] == " dropoffdate") {
+            if (cookie[0] == "dropoffdate") {
                 $dropoffdate = cookie[1];
             }
         }
@@ -61,10 +66,13 @@
         console.log($pickupdate);
         console.log($dropoffdate);
     }
-    
+
     onMount(() => {
         readCookies();
+        console.log("COookie: ", document.cookie);
     });
+
+
 
 </script>
 
@@ -89,7 +97,6 @@
 <div  class="checkboxes">
     <Checkbox bind:checked={youngDriver} label="Young driver (18-22)" name="youngDriver" id="youngDriver" value="youngDriver"></Checkbox>
     <Checkbox bind:checked={aged30_65} label="Aged driver (30-65)" name="aged30-65" id="aged30-65" value="aged30-65"></Checkbox>
-
 </div>
 
 
