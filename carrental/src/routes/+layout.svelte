@@ -128,7 +128,12 @@
       color: white;
       font-family: 'Montserrat', sans-serif;
       font-size: 16px;
-      margin: 10px;
+      padding: 10px;
+    }
+
+    header a:hover {
+      opacity: 0.7;
+      transition: 0.5s;
     }
 
     nav {

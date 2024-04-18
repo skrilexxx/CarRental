@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import { pickupdate } from "../stores/mapLocations";
     import { dropoffdate } from "../stores/mapLocations";
+	import { get_store_value } from 'svelte/internal';
     export let idCal;
 
 
@@ -30,6 +31,7 @@
 
     onMount(() => {
         mounted = true;
+        readCookiesStore();
     });
 
     $: if (mounted) {
@@ -44,13 +46,24 @@
         });
     }
 
+    function readCookiesStore() {
+        let input = document.getElementById(idCal);
+        if (idCal == "from") {
+            pickupdate.set(input.value);
+        } else {
+            dropoffdate.set(input.value);
+        }
+    }
+
 
 
 </script>
 
 
 <div class="content">
-    <input type="date" class="input-calendar" id={idCal} value={date} min={date} max={max} >
+    {#key get_store_value}
+        <input type="date" class="input-calendar" id={idCal} value={date} min={date} max={max} >
+    {/key}
 </div>
 
 

@@ -3,7 +3,8 @@
     import Pickupbar from "./pickupbar.svelte";
     import Calendar from "./calendar.svelte";
     import Checkbox from "./checkbox.svelte";
-    import { pickupLocation } from "../stores/mapLocations";
+    import { pickupLocation, pickupdate, dropoffdate } from "../stores/mapLocations";
+    import {onMount} from "svelte";
 
 
     let aged30_65 = false;
@@ -15,18 +16,71 @@
     }
 
     $: check(aged30_65, youngDriver);
+
+
+    function setPickupLocation() {
+        document.cookie= "pickupLocation=" + $pickupLocation + ";";
+
+    }
+    
+
+    function setPickupDate() {
+        document.cookie= "pickupdate=" + $pickupdate + ";";
+    }
+
+    function setDropoffDate() {
+        document.cookie= "dropoffdate=" + $dropoffdate + ";";
+    }
+
+    function addCokies() {
+        setPickupLocation();
+        setPickupDate();
+        setDropoffDate();
+        console.log(document.cookie);
+    }
+
+    function readCookies() {
+        let cookies = document.cookie.split(";");
+        console.log(cookies);
+
+        for (let i = 0; i < cookies.length; i++) {
+            let cookie = cookies[i].split("=");
+            console.log(cookie);
+            if (cookie[0] == "pickupLocation") {
+                $pickupLocation = cookie[1];
+            }
+            if (cookie[0] == " pickupdate") {
+                $pickupdate = cookie[1];
+            }
+            if (cookie[0] == " dropoffdate") {
+                $dropoffdate = cookie[1];
+            }
+        }
+        console.log("Cookies read/stored:");
+        console.log($pickupLocation);
+        console.log($pickupdate);
+        console.log($dropoffdate);
+    }
+    
+    onMount(() => {
+        readCookies();
+    });
+
 </script>
 
 <div class="barBg">
     <div class="searchbar">
+        {#key $pickupLocation}
         <div class="pickup">
             <Pickupbar bind:location = {$pickupLocation}></Pickupbar>
         </div>
+        {/key}
         <div class="calendar">
             <Calendar idCal="from"></Calendar>
             <Calendar idCal="to"></Calendar>
         </div>
-        <div class="btn">
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <div class="btn" on:click={addCokies}>
             <Button label="Search" path="/carList"></Button>
         </div>
     </div>

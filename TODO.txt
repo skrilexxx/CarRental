@@ -13,6 +13,8 @@ do db pridat status objednavek, a tabulku na typ statusu, podana, prijata, hotov
 
 Priorita do odevzdání :
 
+Toto 100% musí být- cookie bar upozornění nacookies, Tato stránka používá soubory cookies, popup treba na 5 sekund
+
 1. requesty na backend nachystat - success page
 1.9 jeste malinko fixnout filter aby se filtry dali kombinovat lip
 2. cookies - aby se ty selected věci propisovali

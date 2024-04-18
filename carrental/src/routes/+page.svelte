@@ -1,6 +1,7 @@
 <script>
 	import Button from "./lib/button.svelte";
 	import Searchbar from "./lib/searchbar.svelte";
+    import { pickupLocation, pickupdate, dropoffdate } from "./stores/mapLocations";
 
 
 </script>
