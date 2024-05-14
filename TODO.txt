@@ -14,6 +14,7 @@ do db pridat status objednavek, a tabulku na typ statusu, podana, prijata, hotov
 Priorita do odevzdání :
 
 Predelat pro kazdy auto jiny obrazky, data podle skutecnosti!!!
+Dodělat ve formulaři porovnavani podle regex (regularnich vyrazu)
 
 1. requesty na backend nachystat - success page
 1.9 jeste malinko fixnout filter aby se filtry dali kombinovat lip

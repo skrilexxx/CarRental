@@ -3,6 +3,9 @@
   import "./styles/global.css";
   import Button from "./lib/button.svelte";
   import { onMount } from "svelte";
+  import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+  injectSpeedInsights();
 
   let year = new Date().getFullYear();
 

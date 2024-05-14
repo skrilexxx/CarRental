@@ -33,7 +33,7 @@ export const testCars = [
         fuel: 'Petrol',
         transmission: 'Automatic',
         year: 2020,
-        price: 120,
+        price: 75,
         engineDisplacement: 2500,
         enginePower: "203 hp",
         consumption: "6.3"
@@ -46,7 +46,7 @@ export const testCars = [
         fuel: 'Petrol',
         transmission: 'Automatic',
         year: 2018,
-        price: 120,
+        price: 55,
         engineDisplacement: 1800,
         enginePower: "158 hp",
         consumption: "6.3"

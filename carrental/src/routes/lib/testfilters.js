@@ -7,19 +7,19 @@ export const testFilters = [
     },
     {
         carId: 2,
-        priceF: ["price2"],
-        typeF: ["type1"],
+        priceF: ["price3"],
+        typeF: ["type4"],
         fuelF: ["fuel2"]
     },
     {
         carId: 3,
-        priceF: ["price3"],
+        priceF: ["price2"],
         typeF: ["type2"],
         fuelF: ["fuel1"]
     },
     {
         carId: 4,
-        priceF: ["price3"],
+        priceF: ["price2"],
         typeF: ["type1"],
         fuelF: ["fuel1"]
     },
