@@ -22,4 +22,6 @@ Dodělat ve formulaři porovnavani podle regex (regularnich vyrazu)
 3. dodelat kdyz si vyberes price skupinu at te to nekam hodi se selected filtrama - provozne done
 4. dodelat obrazky ke kazdymu autu
 
-Bonus:  udělat backed
+85. predelat Car List page
+
+Bonus:  udělat backed v JavaScriptu, ne ve flasku, bude to vic easy a lip se to bude propojovat
