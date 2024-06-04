@@ -3,7 +3,6 @@
 12. Předělat stylování do global.css, at je to vsude stejný anemuím to psat vsede, treba ten popul atd, abz ten odz byl lepsi
 Po tom co bude page hotova na 1920*1080 rozliseni cca nebo jakoze n pc, tak to muzu predelat i na phone pomoci tovyho toho ze od nejakych zormeru to bude mit nejaky rozmery atd
 14. na konec potom instrikce k vyzvdenuti, podminky, smlouvy, pro maturitni praci musi byt rezervace zdarma
-16. mam udelanej store na google mapy a na selected location ale buttuny mi refreshusi stranku takze se to vzdy resetuje, nejde mi to vypnout ten refresh, asi to udelam jinak
 
 dodelat image drag slide pro phone
 
@@ -11,17 +10,21 @@ Na konec po zabookovani napsat ze byla poslana objednavka a ze bude poslan email
 do db pridat status objednavek, a tabulku na typ statusu, podana, prijata, hotova, ....
 
 
-Priorita do odevzdání :
 
-Predelat pro kazdy auto jiny obrazky, data podle skutecnosti!!!
-Dodělat ve formulaři porovnavani podle regex (regularnich vyrazu)
+3.6. 2024
+
+2. Car List page předělat
+3. Udělat funkční filtry
+4. Dodělat / předělat kalendář
+5. cookies fixnout - kalendář
+6. ověření formuláře pomocí regexu
+7. dodělat multijazyčnost
+8. možná lehce upravit About ještě
 
 1. requesty na backend nachystat - success page
-1.9 jeste malinko fixnout filter aby se filtry dali kombinovat lip
-2. cookies - kalendar fix
 3. dodelat kdyz si vyberes price skupinu at te to nekam hodi se selected filtrama - provozne done
-4. dodelat obrazky ke kazdymu autu
 
-85. predelat Car List page
 
-Bonus:  udělat backed v JavaScriptu, ne ve flasku, bude to vic easy a lip se to bude propojovat
+Až bude FT: udělat backed v JavaScriptu, ne ve flasku, bude to vic easy a lip se to bude propojovat (asi, proste udělat backend)¨
+
+ofc na backed vic realna data - hlavně ceny fixnout

@@ -68,7 +68,6 @@
     border-radius: 15px;
     margin-top: 10px;
     margin-bottom: 20px;
-    border: 4px solid #626161;
 }
 
 .content {

@@ -29,6 +29,7 @@
 
 <div class="content">
     <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div class="header" on:click={showDropdown}>
         <div class="icon">
             <img src="/dropdownarrow.svg" alt="dropdownarrow" class="dropdownarrow"/>
@@ -37,6 +38,7 @@
     </div>
 
         <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
         <div class="dropdown hidden" id="dropdown" on:click={hideDropdown}>
             <p>Choose pick-up location</p>
             <Location bind:selecredLocation={$pickupLocation} label="NC Královo Pole" address="OC, Cimburkova 4, 612 00 Brno-Královo Pole"></Location>

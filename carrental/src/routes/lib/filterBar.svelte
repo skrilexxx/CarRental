@@ -112,7 +112,6 @@
     border-radius: 15px;
     margin-bottom: 20px;
     margin-top: 10px;
-    border: 4px solid #626161;
 
 }
 

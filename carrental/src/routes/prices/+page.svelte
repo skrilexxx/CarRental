@@ -10,7 +10,9 @@
     <div class="title">
         <h2>Prices</h2>
     </div>
+    <p>Choose one that suits You</p>
 </div>
+
 <div class="content">
     <div class="home">
         <div class="prices">
@@ -38,11 +40,22 @@
     .contentTitle {
         display: flex;
         flex-direction: column;
-        align-items: left;
+        align-items: center;
         justify-content: center;
         margin: 0 auto;
+        margin-bottom: 45px;
         padding: 0;
         max-width: 1760px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .contentTitle p {
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
     }
 
     .title {
@@ -56,18 +69,6 @@
         max-width: 1300px;
         width: 100%;
         text-align: left;
-    }
-
-    .instructions{
-        text-decoration: none;
-        color: white;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 16px;
-        }
-
-    .instructions:hover {
-        text-decoration: underline;
-        color: #BC6FF1;
     }
 
     .prices {

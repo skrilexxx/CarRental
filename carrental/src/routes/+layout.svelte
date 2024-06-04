@@ -47,9 +47,11 @@
     <div class="inMenu">
       <div class="top">
         <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
         <img src="/menuExit.svg" id="menuExit" on:click={hamburger} alt="exitButton">
       </div>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <!-- svelte-ignore a11y-no-static-element-interactions -->
       <div class="pages" on:click={hamburger}>
         <a href="/">Home</a>
         <a href="/about">About</a>
@@ -90,6 +92,7 @@
       </div>
 
       <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <!-- svelte-ignore a11y-no-static-element-interactions -->
       <div class="hamburger" id="burg" on:click={hamburger}>
         <img src="/hamburger.svg" alt="hamburger"/>
       </div>

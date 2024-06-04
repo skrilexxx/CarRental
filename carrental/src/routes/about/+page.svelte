@@ -13,17 +13,69 @@
         <br><br>
         <p>Explore the vibrant city of Brno with the convenience and freedom of our premium car rental services. At Brno Car Rentals, we understand that your journey is unique, and we're here to ensure you travel in comfort and style.</p>
         <br><br><br>
-        <p style="font-weight: bold;">Why Choose Brno Car Rentals?</p>
-        <br><br>
-        <ul class="answerList" style="list-style-type:none">
-            <li><p>Extensive Fleet: From compact cars to spacious SUVs, we have a diverse fleet to cater to your specific needs. Whether you're here for a business trip or a family vacation, we have the perfect vehicle for you.</p></li>
-            <br>
-            <li><p>Affordable Rates: We believe in providing quality service at competitive prices. Our transparent pricing ensures that you get the best value for your money, with no hidden fees.</p></li>
-            <br>
-            <li><p>Convenient Locations: With multiple pick-up and drop-off locations across Brno, you can easily collect and return your rental car at a spot that suits your itinerary.</p></li>
-            <br>
-            <li><p>24/7 Customer Support: Our dedicated customer support team is available round the clock to assist you. Whether you have questions about your reservation or need assistance on the road, we're just a phone call away.</p></li>
-        </ul>
+        <p class="secondTitle">Why Choose Brno Car Rentals?</p>
+
+
+        <div class="banners">
+            <div class="banner">
+                <div class="bannerTitle">
+                    <p class="BTitle">Extensive</p>
+                    <p class="PTitle">Fleet</p>
+                </div>
+                <div class="items">
+                    <p>Sedan</p>
+                    <p>Coupe</p>
+                    <p>Cabrio</p>
+                    <p>Sport</p>
+                    <p>SUV</p>
+                    <p>Van</p>
+                    <p>And more ...</p>
+                </div>
+            </div>
+
+            <div class="banner">
+                <div class="bannerTitle">
+                    <p class="BTitle">Affordable</p>
+                    <p class="PTitle">Rates</p>
+                </div>
+                <div class="items">
+                    <p>Friendly prices</p>
+                    <p>Many categories</p>
+                    <p>Best in Brno</p>
+                    <p>You choose</p>
+                </div>
+            </div>
+
+            <div class="banner">
+                <div class="bannerTitle">
+                    <p class="BTitle">Convinient</p>
+                    <p class="PTitle">Locations</p>
+                </div>
+                <div class="items">
+                    <p>Easily accesible </p>
+                    <p>Across Brno</p>
+                    <p>City Center</p>
+                    <p>Airport</p>
+                    <p>More soon ...</p>
+                </div>
+            </div>
+
+            <div class="banner">
+                <div class="bannerTitle">
+                    <p class="BTitle">Customer</p>
+                    <p class="PTitle">Support</p>
+                </div>
+                <div class="items">
+                    <p>24/7 service</p>
+                    <p>Ready to help</p>
+                    <p>Road assistance</p>
+                    <p>Get information</p>
+                    <p>Call us !</p>
+                </div>
+            </div>
+
+        </div>
+
         <br>
     </div>
 </div>
@@ -44,7 +96,7 @@
 .contentTitle {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     justify-content: center;
     margin: 0 auto;
     padding: 0;
@@ -58,6 +110,10 @@
     align-items: left;
 }
 
+h2 {
+    margin-bottom: 20px;
+}
+
 .home p {
     display: inline;
     font-family: 'Montserrat', sans-serif;
@@ -68,19 +124,96 @@
 
 .home {
     max-width: 1300px;
+    width: 80%;
+    text-align: center;
+}
+
+.banners {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
-    text-align: left;
+    margin-top: 45px;
 }
 
-li:before {
-    content: "•";
-    color: white;
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 340px;
+    background-color: #F5F5F5;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.banner .BTitle {
+    font-size: 24px;
     font-weight: bold;
-    margin-right: 0.5rem;
+    color: black;
+    margin: 0;
+    text-align: left;
+
 }
 
-li {
+.banner .PTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #BC6FF1;
+    margin: 0;
     text-align: left;
+
+}
+
+.banner p {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    text-align: left;
+}
+
+.bannerTitle {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.items {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.items p {
+    margin-top: 11px;
+}
+
+.secondTitle {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media (max-width: 820px) {
+    .banners {
+        flex-direction: column;
+    }
+    .banner {
+        margin: 10px;
+    }
+
+    .secondTitle {
+        font-size: 24px;
+    }
+
+
 }
 
 </style>

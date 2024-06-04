@@ -60,7 +60,6 @@
     height: 480px;
     background-color: white;
     border-radius: 15px;
-    border: 4px solid #626161;
 }
 
 .title {
@@ -159,7 +158,6 @@
 .bottom :global(button) {
     height: 50px;
     border-radius: 10px;
-    background-color: #BC6FF1;
     color: white;
     font-size: 18px;
     cursor: pointer;
