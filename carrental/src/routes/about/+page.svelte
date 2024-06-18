@@ -9,11 +9,12 @@
 </div>
 <div class="content">
     <div class="home">
-        <p style="font-weight: bold;">Welcome to Brno Car Rentals</p>
-        <br><br>
-        <p>Explore the vibrant city of Brno with the convenience and freedom of our premium car rental services. At Brno Car Rentals, we understand that your journey is unique, and we're here to ensure you travel in comfort and style.</p>
-        <br><br><br>
-        <p class="secondTitle">Why Choose Brno Car Rentals?</p>
+        <div class="info">
+            <p class="firstTitle">Welcome to Brno Car Rentals</p>
+            <p class="aboutText">Explore the vibrant city of Brno with the convenience and freedom of our premium car rental services. At Brno Car Rentals, we understand that your journey is unique, and we're here to ensure you travel in comfort and style.</p>
+            <p class="secondTitle">Why Choose Brno Car Rentals?</p>
+        </div>
+
 
 
         <div class="banners">
@@ -114,6 +115,14 @@ h2 {
     margin-bottom: 20px;
 }
 
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
 .home p {
     display: inline;
     font-family: 'Montserrat', sans-serif;
@@ -195,6 +204,12 @@ h2 {
     margin-top: 11px;
 }
 
+
+.firstTitle {
+    font-weight: bold;
+    margin: 0;
+}
+
 .secondTitle {
     font-size: 32px;
     font-weight: bold;
@@ -207,10 +222,21 @@ h2 {
     }
     .banner {
         margin: 10px;
+        width: 80%;
+
     }
 
+
     .secondTitle {
-        font-size: 24px;
+        font-size: 18px;
+    }
+
+    .home .aboutText {
+        display: none;
+    }
+
+    .home .firstTitle {
+        display: none;
     }
 
 

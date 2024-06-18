@@ -1,11 +1,11 @@
 <script>
     import CarCard from "../lib/carCard.svelte";
     import CarCardPhone from "../lib/carCardPhone.svelte";
-    import FilterBar from "../lib/filterBar.svelte";
     import { browser } from '$app/environment';
     import Button from "../lib/button.svelte";
     import { activeFilters } from "../stores/filters.js";
 	import { empty, is_empty } from "svelte/internal";
+    import FilterTab from "../lib/filterTab.svelte";
 
     let screenWith;
     export let data;
@@ -60,7 +60,7 @@
                     if (aFilters[obj].length != 0) {
                         console.log("obj: ", aFilters[obj]);
                         for (let y = 0; y < aFilters[obj].length; y++) {
-                            if (aFilters[obj][y] == filters[i].priceF || aFilters[obj][y] == filters[i].typeF || aFilters[obj][y] == filters[i].fuelF) {
+                            if (aFilters[obj][y] == filters[i].priceF || aFilters[obj][y] == filters[i].typeF || aFilters[obj][y] == filters[i].fuelF || aFilters[obj][y] == filters[i].transF) {
                                 if (!filteredCars.includes(cars[i])) {
                                 filteredCars.push(cars[i]);
                                 filtered = true;
@@ -86,7 +86,6 @@
     }
 
     $: transition(screenWith);
-
     console.log("List of cars from DB", cars)
     console.log("List of filters from DB", filters)
 </script>
@@ -100,18 +99,18 @@
     </div>
 </div>
 
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="filterButton" id="filterButton" on:click={showFilter}>
-    <p>Filter</p>
-    <img src="/filterIcon.svg" alt="filterIcon">
-</div>
-
 <div class="content">
     <div class="home">
+        <p class="secondTitle">Which Vehicle do You Want to Drive ?</p>
+
+
         <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <div class="filter" id="filter" on:click={displayFilteredCars}>
-            <FilterBar></FilterBar>
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
+        <div class="filter" id="filter" on:click={displayFilteredCars} >
+            <FilterTab></FilterTab>
         </div>
+
+
         <div class="cards">
             {#key preloadedCars}
             {#each preloadedCars as car}
@@ -154,11 +153,15 @@
 .contentTitle {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     justify-content: center;
     margin: 0 auto;
     padding: 0;
     max-width: 1760px;
+}
+
+h2 {
+    margin-bottom: 20px;
 }
 
 .title {
@@ -168,12 +171,23 @@
     align-items: left;
 }
 
+.secondTitle {
+    display: inline;
+    max-width: 750px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+
+}
+
 .home {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     max-width: 1760px;
     width: 100%;
-    text-align: left;
+    text-align: center;
 }
 
 .cards {
@@ -191,31 +205,8 @@
 
 .filter {
     display: flex;
-}
-
-.filterButton {
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
-    border: 3px solid #626161;
-    background-color: white;
-    width: 140px;
-    height: 36px;
-}
-
-.filterButton p {
-    color: black;
-    font-weight: 600;
-    font-size: 18px;
-    margin: 0px;
-    margin-left: 10px;
-}
-
-.filterButton img {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .moreBtn :global(button) {
@@ -230,22 +221,17 @@
     }
 
 @media (max-width: 820px) {
+
     .filter {
         display: none;
-        position: absolute;
-        top: 183px;
-        left: 20px;
-        width: 250px;
-        animation-name: fade-in;
-        animation-duration: 0.4s;
-    }
-
-    .filterButton {
-        display: flex;
     }
 
     .cards {
         min-width: 0;
+    }
+
+    .secondTitle {
+        display: none;
     }
 }
 </style>

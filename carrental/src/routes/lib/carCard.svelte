@@ -67,7 +67,7 @@
     background-color: white;
     border-radius: 15px;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .content {
