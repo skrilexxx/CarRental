@@ -126,7 +126,6 @@ h2 {
 .home p {
     display: inline;
     font-family: 'Montserrat', sans-serif;
-    max-width: 750px;
     font-weight: medium;
     text-align: center;
 }
@@ -215,6 +214,7 @@ h2 {
     font-weight: bold;
     margin: 0;
 }
+
 
 @media (max-width: 820px) {
     .banners {

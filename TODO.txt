@@ -13,13 +13,12 @@ do db pridat status objednavek, a tabulku na typ statusu, podana, prijata, hotov
 
 3.6. 2024
 
-2.5 změnit hamburger menu
-2.6 chtěl bych upravit / předělat phoneCarCard
+2.5 změnit hamburger menu - animace + detaily
 2.8 dodělat CarList pro mobil - asi overlay filter jak na sixt
 3. Udělat funkční filtry - vylepšit
 4. Dodělat / předělat kalendář
 5. cookies fixnout - kalendář
-6. ověření formuláře pomocí regexu
+6. ověření čísla dokladu
 7. dodělat multijazyčnost
 8. možná lehce upravit About ještě
 9. upravit kompabilitu s mobilními zařízeními

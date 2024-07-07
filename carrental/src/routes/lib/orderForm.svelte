@@ -10,6 +10,11 @@
     let car = data.cars;
     let price;
 
+    //Regex patterns
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    const phonePattern = /^\+?([0-9]{1,4})\)?[-. ]?([0-9]{1,4})[-. ]?([0-9]{1,4})[-. ]?([0-9]{1,4})$/;
+    const driverLicensePattern = /^[a-zA-Z]{2}-\d\d-(19\d\d|20[01][0-9])-\d{7}$/; //Format: AA-99-9999-9999999
+
     let orderData = {
         name: "",
         surname: "",
@@ -40,12 +45,15 @@
     let addressMessage = "";
 
     function sendOrder() {
+        driverMessage = "";
+        addressMessage = "";
+
         if (document.getElementById("Email address").value == "" || document.getElementById("Name").value == "" || document.getElementById("Surname").value == "" || document.getElementById("Driver license number").value == "" || document.getElementById("Street").value == "" || document.getElementById("House number").value == "" || document.getElementById("City").value == "" || document.getElementById("Zip code").value == "" || document.getElementById("country").value == "" || document.getElementById("Phone number").value == "") {
             driverMessage = "*All fields are required."
             addressMessage = "*All fields are required."
             return;
         }
-        if (!document.getElementById("Email address").value.includes("@")) {
+        if (!emailPattern.test(document.getElementById("Email address").value)) {
             driverMessage = "*Please enter a valid email address."
             return;
         }
@@ -57,7 +65,7 @@
             driverMessage = "*Please enter a valid driver license number."
             return;
         }
-        if (document.getElementById("Phone number").value.length  < 9 || document.getElementById("Phone number").value.length  > 15) {
+        if (!phonePattern.test(document.getElementById("Phone number").value)) {
             driverMessage = "*Please enter a valid phone number."
             return;
         }
@@ -171,7 +179,7 @@
         <PriceInfo bind:carInfo={car} bind:totalPrice={price}> </PriceInfo>
     </div>
 
-    <Button label="Book Free" action={sendOrder} ></Button>
+    <Button label="Book and Pay" action={sendOrder} ></Button>
 
 
 </div>

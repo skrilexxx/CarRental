@@ -17,6 +17,8 @@
     } else {
       menu.classList.add('hidden');
     }
+
+
   }
 
   function closeBanner() {
@@ -44,25 +46,30 @@
 
 
   <div class="menu hidden" id="menu">
-    <div class="inMenu">
-      <div class="top">
+    <div class="blur">
+
+    </div>
+    <div class="greyMenu">
+      <div class="inMenu">
+        <div class="top">
+          <!-- svelte-ignore a11y-click-events-have-key-events -->
+          <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+          <img src="/menuArrow.svg" id="menuExit" on:click={hamburger} alt="exitButton">
+        </div>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-        <img src="/menuExit.svg" id="menuExit" on:click={hamburger} alt="exitButton">
-      </div>
-      <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <!-- svelte-ignore a11y-no-static-element-interactions -->
-      <div class="pages" on:click={hamburger}>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/carList">Car List</a>
-        <a href="/prices">Prices</a>
-        <a href="/contact">Contact</a>
-      </div>
-      <div class="bottom">
-        <a href="https://www.instagram.com/"><img src="/instagram.svg" alt="instagram"/></a>
-        <a href="https://www.linkedin.com/"><img src="/linkedin.svg" alt="twitter"/></a>
-        <a href="https://www.facebook.com/"><img src="/facebook.svg" alt="facebook"/></a>
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
+        <div class="pages" on:click={hamburger}>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/carList">Car List</a>
+          <a href="/prices">Prices</a>
+          <a href="/contact">Contact</a>
+        </div>
+        <div class="bottom">
+          <a href="https://www.instagram.com/"><img src="/instagram.svg" alt="instagram"/></a>
+          <a href="https://www.linkedin.com/"><img src="/linkedin.svg" alt="twitter"/></a>
+          <a href="https://www.facebook.com/"><img src="/facebook.svg" alt="facebook"/></a>
+        </div>
       </div>
     </div>
   </div>
@@ -213,24 +220,39 @@
     }
 
     .menu {
+      top:0;
+      left: -330px;
+      display: flex;
       z-index: 1;
       position: fixed;
       top: 0;
       left: 0;
-      background-color: #626161;
-      opacity: 0.9;
       width: 100%;
       height: 100%;
-      animation-name: fade-in;
-      animation-duration: 0.4s;
+      backdrop-filter: blur(10px);
+    }
+
+
+    .blur {
+      width: 30%;
+      height: 100%;
+      background-color: white;
+      opacity: 0.3;
     }
 
     .inMenu {
-      margin-left: 20px;
-      margin-right: 20px;
       display: flex;
       flex-direction: column;
+      width: 100%;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .greyMenu {
+      display: flex;
+      width: 70%;
       height: 100%;
+      background-color: #626161;
     }
 
     .top {
@@ -244,6 +266,7 @@
       height: 30px;
       width: 30px;
     }
+
 
     #menuExit:hover {
       cursor: pointer;
@@ -292,8 +315,10 @@
 
     @keyframes fade-in {
     from {opacity: 0;}
-    to {opacity: 0.9;}
+    to {opacity: 1;}
 }
+
+
 
     @media (max-width: 820px) {
       .links {
@@ -307,6 +332,7 @@
       .hamburger {
         display: inline;
       }
+
 
       nav {
         padding: 0px;
